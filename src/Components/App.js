@@ -1,7 +1,9 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import { Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
+import Home from "./Home";
+import LogIn from "./LogIn";
+import FilmsPage from "./FilmsPage";
+import NavBar from "./NavBar";
 
 function App() {
   useEffect(() => {
@@ -10,7 +12,22 @@ function App() {
       .then((data) => console.log(data));
   }, []);
 
-  return <div></div>;
+  return (
+    <div>
+      <NavBar />
+      <Switch>
+        <Route path="/filmspage">
+          <FilmsPage />
+        </Route>
+        <Route path="/login">
+          <LogIn />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </div>
+  );
 }
 
 export default App;
