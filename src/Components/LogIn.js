@@ -24,6 +24,8 @@ function Login({ setIsLoggedIn }) {
       resp.json().then((data) => console.log(data))
     );
 
+    console.log(formData)
+
     history.push("/");
   }
 
