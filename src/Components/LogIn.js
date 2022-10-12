@@ -20,6 +20,10 @@ function Login({ setIsLoggedIn }) {
 
     setIsLoggedIn(true);
 
+    fetch("http://localhost:3000/user-login").then((resp) =>
+      resp.json().then((data) => console.log(data))
+    );
+
     history.push("/");
   }
 
