@@ -5,9 +5,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aqua;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.nav {
+  display: inline-block;
+  padding: 0.25rem;
+  margin: 1rem;
+  text-decoration: none;
+  font-size: 1.2em;
+  color: firebrick;
+  border-bottom: none;
+  transition: 0.1s;
+}
+
+.nav:hover,
+.nav:active {
+  color: tomato;
+  background-color: rgb(198, 227, 29);
+
 }

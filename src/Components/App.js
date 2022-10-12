@@ -2,12 +2,13 @@ import { Route, Switch } from "react-router-dom";
 import { useEffect } from "react";
 import Home from "./Home";
 import LogIn from "./LogIn";
-import FilmsPage from "./FilmsPage";
+import FilmPage from "./FilmPage";
+import MyFilmsList from "./MyFilmsList";
 import NavBar from "./NavBar";
 
 function App() {
   useEffect(() => {
-    fetch("http://localhost:3004/criterion-database")
+    fetch("http://localhost:3000/criterion-database")
       .then((resp) => resp.json())
       .then((data) => console.log(data));
   }, []);
@@ -16,11 +17,14 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/filmspage">
-          <FilmsPage />
+        <Route exact path="/filmpage">
+          <FilmPage />
         </Route>
         <Route exact path="/login">
           <LogIn />
+        </Route>
+        <Route exact path="/myfilmslist">
+          <MyFilmsList />
         </Route>
         <Route exact path="/">
           <Home />
