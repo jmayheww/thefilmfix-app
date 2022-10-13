@@ -1,5 +1,6 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
+import Logout from "./Logout";
 
 function Home({ isLoggedIn }) {
   return (
@@ -11,6 +12,7 @@ function Home({ isLoggedIn }) {
       ) : (
         <div>
           <h3>{`Welcome back to The Film Fix App, ${isLoggedIn}. Browse our collection of Criterion films to find your next film fix!`}</h3>
+          <Logout />
         </div>
       )}
     </div>

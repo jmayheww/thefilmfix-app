@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 
+const initialUser = {
+  username: "",
+  password: "",
+};
+const userRecords = "http://localhost:3000/user-login";
+
 function Login({ setIsLoggedIn }) {
   const history = useHistory();
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-  });
+  const [user, setUser] = useState(initialUser);
+
+  console.log(user);
 
   function handleChange(e) {
-    setFormData({
-      ...formData,
+    setUser({
+      ...user,
       [e.target.name]: e.target.value,
     });
   }
@@ -18,14 +23,17 @@ function Login({ setIsLoggedIn }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    fetch(userRecords, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((resp) => console.log(resp.json()))
+      .then((data) => console.log(data));
+
     setIsLoggedIn(true);
-
-    fetch("http://localhost:3000/user-login").then((resp) =>
-      resp.json().then((data) => console.log(data))
-    );
-
-    console.log(formData);
-
     history.push("/home");
   }
 
@@ -42,7 +50,7 @@ function Login({ setIsLoggedIn }) {
           <input
             type="text"
             name="username"
-            value={formData.username}
+            value={user.username}
             placeholder="Username"
             onChange={handleChange}
           />
@@ -51,7 +59,7 @@ function Login({ setIsLoggedIn }) {
           <input
             type="password"
             name="password"
-            value={formData.password}
+            value={user.password}
             placeholder="Password"
             onChange={handleChange}
           />
