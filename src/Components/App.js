@@ -1,10 +1,11 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from "./Home";
-import LogIn from "./LogIn";
+import MyAccount from "./MyAccount";
 import FilmPage from "./FilmPage";
 import MyFilmsList from "./MyFilmsList";
 import NavBar from "./NavBar";
+import Logout from "./Logout";
 
 function App() {
   const [films, setFilms] = useState([]);
@@ -16,20 +17,21 @@ function App() {
       .then((data) => setFilms(data));
   }, []);
 
-
-
   return (
     <div>
       <NavBar setIsLoggedIn={setIsLoggedIn} />
       <Switch>
-        <Route exact path="/filmpage">
+        <Route path="/filmpage">
           <FilmPage films={films} />
         </Route>
-        <Route exact path="/login">
-          <LogIn setIsLoggedIn={setIsLoggedIn} />
+        <Route path="/myaccount">
+          <MyAccount isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
         </Route>
-        <Route exact path="/myfilmslist">
+        <Route path="/myfilmslist">
           <MyFilmsList />
+        </Route>
+        <Route path="/logout">
+          <Logout setIsLoggedIn={setIsLoggedIn} />
         </Route>
         <Route exact path="/">
           <Home isLoggedIn={isLoggedIn} />

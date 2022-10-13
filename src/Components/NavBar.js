@@ -1,12 +1,19 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 
-function NavBar() {
+function NavBar({ setIsLoggedIn }) {
+  const history = useHistory();
+
+  function handleLogout() {
+    setIsLoggedIn(false);
+    history.push("/login");
+  }
   let links = [
     { name: "Home", url: "/" },
-    { name: "Login", url: "/login" },
+    { name: "My Account", url: "/myaccount" },
     { name: "Criterion Collection", url: "/filmpage" },
-    {name: "My Criterion Films", url: "/myfilmslist"}
+    { name: "My Criterion Films", url: "/myfilmslist" },
+    { name: "Logout", url: "/logout" },
   ];
 
   const navLinkFactory = () => {

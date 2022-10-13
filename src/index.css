@@ -30,3 +30,11 @@ code {
   background-color: rgb(198, 227, 29);
 
 }
+
+.navbar {
+  display: inline-flex
+}
+
+.logout {
+  margin: 3em 3em 4em 0;
+}

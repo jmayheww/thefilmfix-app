@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 
 function Login({ setIsLoggedIn }) {
   const history = useHistory();
@@ -24,7 +24,7 @@ function Login({ setIsLoggedIn }) {
       resp.json().then((data) => console.log(data))
     );
 
-    console.log(formData)
+    console.log(formData);
 
     history.push("/");
   }
