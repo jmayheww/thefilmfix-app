@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 import { Redirect, useHistory } from "react-router-dom";
 
+const userRecords = "http://localhost:3000/user-login";
+
 const initialUser = {
   username: "",
   password: "",
 };
-const userRecords = "http://localhost:3000/user-login";
 
-function Login({ setIsLoggedIn }) {
+function Login({ setIsLoggedIn, setLoggedUser }) {
   const history = useHistory();
-  const [user, setUser] = useState(initialUser);
-
-  console.log(user);
+  const [newUser, setNewUser] = useState(initialUser);
+  console.log(newUser);
 
   function handleChange(e) {
-    setUser({
-      ...user,
+    setNewUser({
+      ...newUser,
       [e.target.name]: e.target.value,
     });
   }
@@ -28,10 +28,15 @@ function Login({ setIsLoggedIn }) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(user),
+      body: JSON.stringify(newUser),
     })
-      .then((resp) => console.log(resp.json()))
-      .then((data) => console.log(data));
+      .then((resp) => resp.json())
+      .then((data) =>
+        setLoggedUser((currentUserState) => [
+          ...currentUserState,
+          data.username,
+        ])
+      );
 
     setIsLoggedIn(true);
     history.push("/home");
@@ -50,7 +55,7 @@ function Login({ setIsLoggedIn }) {
           <input
             type="text"
             name="username"
-            value={user.username}
+            value={newUser.username}
             placeholder="Username"
             onChange={handleChange}
           />
@@ -59,7 +64,7 @@ function Login({ setIsLoggedIn }) {
           <input
             type="password"
             name="password"
-            value={user.password}
+            value={newUser.password}
             placeholder="Password"
             onChange={handleChange}
           />

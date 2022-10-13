@@ -10,6 +10,7 @@ import Logout from "./Logout";
 function App() {
   const [films, setFilms] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loggedUser, setLoggedUser] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/criterion-database")
@@ -25,16 +26,21 @@ function App() {
           <FilmPage films={films} />
         </Route>
         <Route path="/myaccount">
-          <MyAccount isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+          <MyAccount
+            isLoggedIn={isLoggedIn}
+            setIsLoggedIn={setIsLoggedIn}
+            setLoggedUser={setLoggedUser}
+          />
         </Route>
         <Route path="/myfilmslist">
           <MyFilmsList />
         </Route>
-        <Route path="/logout">
-          <Logout setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
-        </Route>
         <Route exact path="/home">
-          <Home isLoggedIn={isLoggedIn} />
+          <Home
+            isLoggedIn={isLoggedIn}
+            setIsLoggedIn={setIsLoggedIn}
+            loggedUser={loggedUser}
+          />
         </Route>
       </Switch>
     </div>

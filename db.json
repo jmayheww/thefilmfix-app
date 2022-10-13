@@ -1,19 +1,9 @@
 {
   "user-login": [
     {
-      "username": "Herbis",
-      "password": "test",
+      "username": "herbie",
+      "password": "derbie",
       "id": 1
-    },
-    {
-      "username": "Herbis",
-      "password": "testtt",
-      "id": 2
-    },
-    {
-      "username": "",
-      "password": "",
-      "id": 3
     }
   ],
   "criterion-database": [
