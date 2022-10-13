@@ -33,7 +33,7 @@ function App() {
         <Route path="/logout">
           <Logout setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
         </Route>
-        <Route exact path="/">
+        <Route exact path="/home">
           <Home isLoggedIn={isLoggedIn} />
         </Route>
       </Switch>

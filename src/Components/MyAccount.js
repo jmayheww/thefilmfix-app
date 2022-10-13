@@ -10,7 +10,7 @@ function MyAccount({ isLoggedIn, setIsLoggedIn }) {
       {!isLoggedIn ? (
         <Login setIsLoggedIn={setIsLoggedIn} />
       ) : (
-        <Redirect to="/" />
+        <Redirect to="/home" />
       )}
     </div>
   );
