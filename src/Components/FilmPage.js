@@ -3,12 +3,12 @@ import NewFilmForm from "./NewFilmForm";
 import Search from "./Search";
 import FilmList from "./FilmList";
 
-function FilmPage() {
+function FilmPage({ films }) {
   return (
     <main>
       <NewFilmForm />
       <Search />
-      <FilmList />
+      <FilmList films={films} />
     </main>
   );
 }
