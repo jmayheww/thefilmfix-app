@@ -31,7 +31,7 @@ function Login({ setIsLoggedIn }) {
 
   return (
     <div>
-      <h1>Login</h1>
+      <h1>Please login</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <input

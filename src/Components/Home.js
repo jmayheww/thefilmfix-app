@@ -5,7 +5,7 @@ function Home({ isLoggedIn }) {
   if (!isLoggedIn) return <Redirect to="/myaccount" />;
   return (
     <div>
-      <h1>Home!</h1>
+      <h1>Welcome back!</h1>
     </div>
   );
 }

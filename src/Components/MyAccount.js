@@ -1,17 +1,16 @@
 import React from "react";
-import LogIn from "./LogIn";
-import Logout from "./Logout";
+import { Redirect } from "react-router-dom";
+import Login from "./LogIn";
 
-function MyAccount(isLoggedIn, setIsLoggedIn) {
+function MyAccount({ isLoggedIn, setIsLoggedIn }) {
   console.log(isLoggedIn);
-  setIsLoggedIn(true);
 
   return (
     <div>
-      {isLoggedIn ? (
-        <LogIn setIsLoggedIn={setIsLoggedIn} />
+      {!isLoggedIn ? (
+        <Login setIsLoggedIn={setIsLoggedIn} />
       ) : (
-        <h1>Welcome back! You are logged in.</h1>
+        <Redirect to="/" />
       )}
     </div>
   );

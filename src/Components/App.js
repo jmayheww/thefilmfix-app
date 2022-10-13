@@ -31,7 +31,7 @@ function App() {
           <MyFilmsList />
         </Route>
         <Route path="/logout">
-          <Logout setIsLoggedIn={setIsLoggedIn} />
+          <Logout setIsLoggedIn={setIsLoggedIn} isLoggedIn={isLoggedIn} />
         </Route>
         <Route exact path="/">
           <Home isLoggedIn={isLoggedIn} />

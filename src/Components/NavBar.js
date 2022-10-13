@@ -1,13 +1,7 @@
 import React from "react";
-import { NavLink, useHistory } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-function NavBar({ setIsLoggedIn }) {
-  const history = useHistory();
-
-  function handleLogout() {
-    setIsLoggedIn(false);
-    history.push("/login");
-  }
+function NavBar() {
   let links = [
     { name: "Home", url: "/" },
     { name: "My Account", url: "/myaccount" },
