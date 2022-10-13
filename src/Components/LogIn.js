@@ -31,7 +31,12 @@ function Login({ setIsLoggedIn }) {
 
   return (
     <div>
-      <h1>Please login:</h1>
+      <h3>
+        Please log in to your Film Fix account to begin exploring The Film Fix
+        App.
+      </h3>
+      <h4>Log in to your Account:</h4>
+
       <form onSubmit={handleSubmit}>
         <div>
           <input

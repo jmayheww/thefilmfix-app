@@ -2,10 +2,17 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 function Home({ isLoggedIn }) {
-  if (!isLoggedIn) return <Redirect to="/myaccount" />;
   return (
-    <div>
-      <h1>Welcome back!</h1>
+    <div className="home">
+      {!isLoggedIn ? (
+        <div>
+          <Redirect to="/myaccount" />
+        </div>
+      ) : (
+        <div>
+          <h3>{`Welcome back to The Film Fix App, ${isLoggedIn}. Browse our collection of Criterion films to find your next film fix!`}</h3>
+        </div>
+      )}
     </div>
   );
 }
