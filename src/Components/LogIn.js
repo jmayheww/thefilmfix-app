@@ -1,17 +1,14 @@
 import React, { useState } from "react";
-import { Redirect, useHistory } from "react-router-dom";
-
-const userRecords = "http://localhost:3000/user-login";
+import { useHistory } from "react-router-dom";
 
 const initialUser = {
   username: "",
   password: "",
 };
 
-function Login({ setIsLoggedIn, setLoggedUser }) {
+function Login({ setIsLoggedIn, setLoggedUser, userData }) {
   const history = useHistory();
   const [newUser, setNewUser] = useState(initialUser);
-  console.log(newUser);
 
   function handleChange(e) {
     setNewUser({
@@ -23,7 +20,7 @@ function Login({ setIsLoggedIn, setLoggedUser }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(userRecords, {
+    fetch(userData, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,10 +29,7 @@ function Login({ setIsLoggedIn, setLoggedUser }) {
     })
       .then((resp) => resp.json())
       .then((data) =>
-        setLoggedUser((currentUserState) => [
-          ...currentUserState,
-          data.username,
-        ])
+        setLoggedUser((currentUserState) => [...currentUserState, data])
       );
 
     setIsLoggedIn(true);
