@@ -29,7 +29,7 @@ function Login({ setIsLoggedIn, setLoggedUser, userData }) {
     })
       .then((resp) => resp.json())
       .then((data) =>
-        setLoggedUser((currentUserState) => [...currentUserState, data])
+        setLoggedUser((currentUserState) => [data, ...currentUserState])
       );
 
     setIsLoggedIn(true);

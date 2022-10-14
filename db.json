@@ -1,41 +1,5 @@
 {
-  "user-login": [
-    {
-      "username": "Larb",
-      "password": "eeee",
-      "id": 1
-    },
-    {
-      "username": "eee",
-      "password": "eee",
-      "id": 2
-    },
-    {
-      "username": "eee",
-      "password": "eee",
-      "id": 3
-    },
-    {
-      "username": "eeee",
-      "password": "eeee\\",
-      "id": 4
-    },
-    {
-      "username": "EEEE",
-      "password": "eee",
-      "id": 5
-    },
-    {
-      "username": "EEe",
-      "password": "eeee",
-      "id": 6
-    },
-    {
-      "username": "Burbin",
-      "password": "eee",
-      "id": 7
-    }
-  ],
+  "user-login": [],
   "criterion-database": [
     {
       "FIELD1": 0,

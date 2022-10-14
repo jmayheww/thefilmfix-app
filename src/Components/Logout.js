@@ -2,12 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Logout({ isLoggedIn, setIsLoggedIn, loggedUser, userData }) {
-  const loggedUserName = loggedUser.map((user) => user.username);
+  const loggedUserName = loggedUser.slice(0, 1).map((user) => user.username);
+  const loggedId = loggedUser.slice(0, 1).map((user) => user.id);
+
+  console.log(loggedUser);
 
   function handleLogout() {
     setIsLoggedIn(false);
 
-    fetch(userData, {
+    fetch(`${userData}/${loggedId}`, {
       method: "DELETE",
     })
       .then((resp) => resp.json())
