@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Logout({ isLoggedIn, setIsLoggedIn, loggedUser, userData }) {
+function Logout({ setLoggedUser, setIsLoggedIn, loggedUser, userData }) {
+  const [updateLogin, setUpdateLogin] = useState([]);
+
   const loggedUserName = loggedUser.slice(0, 1).map((user) => user.username);
   const loggedId = loggedUser.slice(0, 1).map((user) => user.id);
 
@@ -14,12 +16,16 @@ function Logout({ isLoggedIn, setIsLoggedIn, loggedUser, userData }) {
       method: "DELETE",
     })
       .then((resp) => resp.json())
-      .then((data) => console.log(data));
+      .then((data) =>
+        setUpdateLogin((currentUserLoginState) => [currentUserLoginState, data])
+      );
+    console.log("update login:", updateLogin);
+    setLoggedUser(updateLogin);
   }
 
   return (
     <div className="logout">
-      {!isLoggedIn ? (
+      {loggedUser.length <= 0 ? (
         <div>
           <h3>You are not currently signed in.</h3>
           <Link to="/home">

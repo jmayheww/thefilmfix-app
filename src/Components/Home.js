@@ -2,7 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 function Home({ isLoggedIn, loggedUser }) {
-  if (!isLoggedIn) return <Redirect to="/myaccount" />;
+  if (loggedUser.length <= 0) return <Redirect to="/myaccount" />;
 
   const loggedUserName = loggedUser.slice(0, 1).map((user) => user.username);
   return (

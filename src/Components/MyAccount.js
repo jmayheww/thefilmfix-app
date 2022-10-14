@@ -11,7 +11,7 @@ function MyAccount({
 }) {
   return (
     <div>
-      {!isLoggedIn ? (
+      {loggedUser.length <= 0 ? (
         <Login
           setIsLoggedIn={setIsLoggedIn}
           setLoggedUser={setLoggedUser}

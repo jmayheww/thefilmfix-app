@@ -21,6 +21,14 @@ function App() {
       .then((data) => setFilms(data));
   }, []);
 
+  useEffect(() => {
+    fetch(userData)
+      .then((resp) => resp.json())
+      .then((data) => setLoggedUser(data));
+  }, []);
+
+  console.log(loggedUser);
+
   return (
     <div>
       <NavBar setIsLoggedIn={setIsLoggedIn} />
@@ -46,6 +54,7 @@ function App() {
             setIsLoggedIn={setIsLoggedIn}
             loggedUser={loggedUser}
             userData={userData}
+            setLoggedUser={setLoggedUser}
           />
         </Route>
         <Route exact path="/home">
