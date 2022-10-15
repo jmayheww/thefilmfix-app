@@ -6,7 +6,7 @@ const initialUser = {
   password: "",
 };
 
-function Login({ setIsLoggedIn, setLoggedUser, userData }) {
+function Login({ setLoggedUser, userData }) {
   const history = useHistory();
   const [newUser, setNewUser] = useState(initialUser);
 
@@ -32,7 +32,6 @@ function Login({ setIsLoggedIn, setLoggedUser, userData }) {
         setLoggedUser((currentUserState) => [data, ...currentUserState])
       );
 
-    setIsLoggedIn(true);
     history.push("/home");
   }
 

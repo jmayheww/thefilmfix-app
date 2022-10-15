@@ -1,17 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function Logout({ setLoggedUser, setIsLoggedIn, loggedUser, userData }) {
+function Logout({ setLoggedUser, loggedUser, userData }) {
   const [updateLogin, setUpdateLogin] = useState([]);
 
-  const loggedUserName = loggedUser.slice(0, 1).map((user) => user.username);
-  const loggedId = loggedUser.slice(0, 1).map((user) => user.id);
+  const loggedUserName = loggedUser.map((user) => user.username);
+  const loggedId = loggedUser.map((user) => user.id);
 
   console.log(loggedUser);
 
   function handleLogout() {
-    setIsLoggedIn(false);
-
     fetch(`${userData}/${loggedId}`, {
       method: "DELETE",
     })
@@ -19,7 +17,7 @@ function Logout({ setLoggedUser, setIsLoggedIn, loggedUser, userData }) {
       .then((data) =>
         setUpdateLogin((currentUserLoginState) => [currentUserLoginState, data])
       );
-    console.log("update login:", updateLogin);
+
     setLoggedUser(updateLogin);
   }
 
