@@ -10,13 +10,24 @@ function FilmPage({ films }) {
   function showMoreFilms() {
     setPosition((position + DISPLAY_COUNT) % films.length);
   }
+
+  function showPreviousFilms() {
+    setPosition((position - DISPLAY_COUNT) % films.length);
+  }
+
+  function resetFilms() {
+    setPosition(0);
+  }
+
   return (
     <main>
       <NewFilmForm />
       <Search />
       <FilmList
         films={films.slice(position, position + DISPLAY_COUNT)}
+        handlePreviousClick={showPreviousFilms}
         handleMoreClick={showMoreFilms}
+        handleReset={resetFilms}
       />
     </main>
   );

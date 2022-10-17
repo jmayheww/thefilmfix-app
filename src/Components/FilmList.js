@@ -1,8 +1,15 @@
 import React from "react";
 import FilmCard from "./FilmCard";
 import MoreButton from "./MoreButton";
+import ResetButton from "./ResetButton";
+import PreviousButton from "./PreviousButton";
 
-function FilmList({ films, handleMoreClick }) {
+function FilmList({
+  films,
+  handlePreviousClick,
+  handleMoreClick,
+  handleReset,
+}) {
   const renderFilms = films.map((film) => {
     const {
       Title,
@@ -34,6 +41,8 @@ function FilmList({ films, handleMoreClick }) {
   return (
     <div className="card-container">
       {renderFilms}
+      <PreviousButton handlePreviousClick={handlePreviousClick} />
+      <ResetButton handleReset={handleReset} />
       <MoreButton handleMoreClick={handleMoreClick} />
     </div>
   );
