@@ -1,7 +1,8 @@
 import React from "react";
 import FilmCard from "./FilmCard";
+import MoreButton from "./MoreButton";
 
-function FilmList({ films }) {
+function FilmList({ films, handleMoreClick }) {
   const renderFilms = films.map((film) => {
     const {
       Title,
@@ -15,19 +16,26 @@ function FilmList({ films }) {
     } = film;
 
     return (
-      <FilmCard
-        key={FIELD1}
-        title={Title}
-        description={Description}
-        director={Director}
-        country={Country}
-        year={Year}
-        language={Language}
-        image={Image}
-      />
+      <div className="film-list">
+        <FilmCard
+          key={FIELD1}
+          title={Title}
+          description={Description}
+          director={Director}
+          country={Country}
+          year={Year}
+          language={Language}
+          image={Image}
+        />
+      </div>
     );
   });
 
-  return <div>{renderFilms}</div>;
+  return (
+    <div className="card-container">
+      {renderFilms}
+      <MoreButton handleMoreClick={handleMoreClick} />
+    </div>
+  );
 }
 export default FilmList;

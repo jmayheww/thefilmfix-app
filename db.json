@@ -1,5 +1,11 @@
 {
-  "user-login": [],
+  "user-login": [
+    {
+      "username": "Derbie",
+      "password": "herbie",
+      "id": 1
+    }
+  ],
   "criterion-database": [
     {
       "FIELD1": 0,

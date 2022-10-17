@@ -32,7 +32,7 @@ function Login({ setLoggedUser, userData }) {
         setLoggedUser((currentUserState) => [data, ...currentUserState])
       );
 
-    history.push("/home");
+    history.push("/");
   }
 
   return (

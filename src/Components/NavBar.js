@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   let links = [
-    { name: "Home", url: "/home" },
+    { name: "Home", url: "/" },
     { name: "My Account", url: "/myaccount" },
     { name: "Criterion Collection", url: "/filmpage" },
     { name: "My Criterion Films", url: "/myfilmslist" },

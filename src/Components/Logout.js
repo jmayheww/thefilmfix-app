@@ -26,7 +26,7 @@ function Logout({ setLoggedUser, loggedUser, userData }) {
       {loggedUser.length <= 0 ? (
         <div>
           <h3>You are not currently signed in.</h3>
-          <Link to="/home">
+          <Link to="/">
             <button type="button">Return to Home Page</button>
           </Link>
         </div>

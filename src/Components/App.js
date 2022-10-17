@@ -1,5 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
+import Header from "./Header";
 import Home from "./Home";
 import MyAccount from "./MyAccount";
 import FilmPage from "./FilmPage";
@@ -31,7 +32,7 @@ function App() {
 
   return (
     <div>
-      <NavBar setIsLoggedIn={setIsLoggedIn} />
+      <NavBar />
       <Switch>
         <Route path="/filmpage">
           <FilmPage films={films} />
@@ -57,7 +58,7 @@ function App() {
             setLoggedUser={setLoggedUser}
           />
         </Route>
-        <Route exact path="/home">
+        <Route exact path="/">
           <Home
             isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
