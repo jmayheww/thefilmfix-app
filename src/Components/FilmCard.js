@@ -13,6 +13,7 @@ function FilmCard({
   return (
     <div className="film-card">
       <h4>{title}</h4>
+      <img src={image} alt={"film image"} width="300" height="300" />
     </div>
   );
 }

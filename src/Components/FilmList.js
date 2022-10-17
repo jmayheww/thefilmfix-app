@@ -23,23 +23,23 @@ function FilmList({
     } = film;
 
     return (
-      <div className="film-list">
-        <FilmCard
-          key={FIELD1}
-          title={Title}
-          description={Description}
-          director={Director}
-          country={Country}
-          year={Year}
-          language={Language}
-          image={Image}
-        />
-      </div>
+      <FilmCard
+        key={FIELD1}
+        title={Title}
+        description={Description}
+        director={Director}
+        country={Country}
+        year={Year}
+        language={Language}
+        image={Image}
+      />
     );
   });
 
   return (
     <div className="card-container">
+      <h2>Criterion Collection Films</h2>
+      <br />
       {renderFilms}
       <PreviousButton handlePreviousClick={handlePreviousClick} />
       <ResetButton handleReset={handleReset} />
