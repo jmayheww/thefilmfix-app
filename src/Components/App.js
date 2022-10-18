@@ -1,6 +1,6 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Header from "./Header";
+
 import Home from "./Home";
 import MyAccount from "./MyAccount";
 import FilmPage from "./FilmPage";
@@ -34,7 +34,7 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/filmpage">
+        <Route path="/films">
           <FilmPage films={films} />
         </Route>
         <Route path="/myaccount">

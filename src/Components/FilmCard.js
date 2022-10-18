@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function FilmCard({
   title,
@@ -8,8 +9,9 @@ function FilmCard({
   year,
   language,
   image,
+  id,
 }) {
-  console.log(title);
+  console.log(id);
   return (
     <div className="film-card">
       <h4>{title}</h4>

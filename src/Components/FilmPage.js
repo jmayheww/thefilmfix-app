@@ -1,11 +1,16 @@
 import React, { useState } from "react";
+import { Route, useRouteMatch } from "react-router-dom";
 import NewFilmForm from "./NewFilmForm";
 import Search from "./Search";
 import FilmList from "./FilmList";
+import FilmShow from "./FilmShow";
 
 function FilmPage({ films }) {
+  const match = useRouteMatch();
   const [position, setPosition] = useState(0);
   const DISPLAY_COUNT = 8;
+
+  console.log(match);
 
   function showMoreFilms() {
     setPosition((position + DISPLAY_COUNT) % films.length);
@@ -21,14 +26,19 @@ function FilmPage({ films }) {
 
   return (
     <main>
-      <NewFilmForm />
-      <Search />
-      <FilmList
-        films={films.slice(position, position + DISPLAY_COUNT)}
-        handlePreviousClick={showPreviousFilms}
-        handleMoreClick={showMoreFilms}
-        handleReset={resetFilms}
-      />
+      <div className="films-container">
+        <NewFilmForm />
+        <Search />
+        <FilmList
+          films={films.slice(position, position + DISPLAY_COUNT)}
+          handlePreviousClick={showPreviousFilms}
+          handleMoreClick={showMoreFilms}
+          handleReset={resetFilms}
+        />
+        <Route path={`${match.url}/:filmId`}>
+          <FilmShow films={films} />
+        </Route>
+      </div>
     </main>
   );
 }

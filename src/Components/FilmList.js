@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import FilmCard from "./FilmCard";
 import MoreButton from "./MoreButton";
 import ResetButton from "./ResetButton";
@@ -11,28 +12,17 @@ function FilmList({
   handleReset,
 }) {
   const renderFilms = films.map((film) => {
-    const {
-      Title,
-      Language,
-      Description,
-      Director,
-      Country,
-      Year,
-      Image,
-      FIELD1,
-    } = film;
+    const { Title, Language, Description, Director, Country, Year, Image } =
+      film;
+
+    const id = film.FIELD1;
 
     return (
-      <FilmCard
-        key={FIELD1}
-        title={Title}
-        description={Description}
-        director={Director}
-        country={Country}
-        year={Year}
-        language={Language}
-        image={Image}
-      />
+      <div key={id}>
+        <Link to={`/films/${id}`}>
+          {<img src={Image} height="300" width="300" />}
+        </Link>
+      </div>
     );
   });
 
