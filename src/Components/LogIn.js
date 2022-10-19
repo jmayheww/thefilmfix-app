@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { loginUrl } from "../Utilities/api-helpers";
 
 const initialUser = {
   username: "",
   password: "",
 };
 
-function Login({ setLoggedUser, userData }) {
+function Login({ setLoggedUser }) {
   const history = useHistory();
   const [newUser, setNewUser] = useState(initialUser);
 
@@ -20,7 +21,7 @@ function Login({ setLoggedUser, userData }) {
   function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(userData, {
+    fetch(loginUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

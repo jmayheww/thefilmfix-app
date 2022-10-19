@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { loginUrl } from "../Utilities/api-helpers";
 
-function Logout({ setLoggedUser, loggedUser, userData }) {
+function Logout({ setLoggedUser, loggedUser }) {
   const [updateLogin, setUpdateLogin] = useState([]);
 
   const loggedUserName = loggedUser.map((user) => user.username);
@@ -10,7 +11,7 @@ function Logout({ setLoggedUser, loggedUser, userData }) {
   console.log(loggedUser);
 
   function handleLogout() {
-    fetch(`${userData}/${loggedId}`, {
+    fetch(`${loginUrl}/${loggedId}`, {
       method: "DELETE",
     })
       .then((resp) => resp.json())

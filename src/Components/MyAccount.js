@@ -2,12 +2,12 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 import Login from "./LogIn";
 
-function MyAccount({ loggedUser, setLoggedUser, userData }) {
+function MyAccount({ loggedUser, setLoggedUser }) {
   const loggedUserName = loggedUser.map((user) => user.username);
   return (
     <div>
       {loggedUser.length <= 0 ? (
-        <Login setLoggedUser={setLoggedUser} userData={userData} />
+        <Login setLoggedUser={setLoggedUser} />
       ) : (
         <div className="logged-message">
           <h3>{`Welcome back to The Film Fix App, ${loggedUserName}.`}</h3>

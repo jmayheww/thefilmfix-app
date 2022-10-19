@@ -1,6 +1,8 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import { loginUrl, criterionFilmUrl } from "../Utilities/api-helpers";
+
 import Home from "./Home";
 import MyAccount from "./MyAccount";
 import FilmPage from "./FilmPage";
@@ -9,21 +11,18 @@ import NavBar from "./NavBar";
 import Logout from "./Logout";
 
 function App() {
-  const userData = "http://localhost:3000/user-login";
-  const criterionFilmData = "http://localhost:3000/criterion-database";
-
   const [films, setFilms] = useState([]);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [loggedUser, setLoggedUser] = useState([]);
 
   useEffect(() => {
-    fetch(criterionFilmData)
+    fetch(criterionFilmUrl)
       .then((resp) => resp.json())
       .then((data) => setFilms(data));
   }, []);
 
   useEffect(() => {
-    fetch(userData)
+    fetch(loginUrl)
       .then((resp) => resp.json())
       .then((data) => setLoggedUser(data));
   }, []);
@@ -43,7 +42,6 @@ function App() {
             loggedUser={loggedUser}
             setIsLoggedIn={setIsLoggedIn}
             setLoggedUser={setLoggedUser}
-            userData={userData}
           />
         </Route>
         <Route path="/myfilmslist">
@@ -54,7 +52,6 @@ function App() {
             isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
             loggedUser={loggedUser}
-            userData={userData}
             setLoggedUser={setLoggedUser}
           />
         </Route>
