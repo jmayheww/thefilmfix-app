@@ -6,6 +6,12 @@
       "id": 1
     }
   ],
+  "user-collections": [
+    {
+      "id": 1,
+      "collection": []
+    }
+  ],
   "criterion-database": [
     {
       "FIELD1": 0,
