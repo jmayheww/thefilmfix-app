@@ -32,7 +32,7 @@ function FilmList({
 
   return (
     <div className="card-container">
-      <h2>Criterion Collection Films</h2>
+      <h1>Criterion Collection Films</h1>
       <br />
       {renderFilms}
       <div className="film-nav-buttons">

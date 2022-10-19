@@ -85,6 +85,11 @@
     justify-content: flex-start;
 }
 
+.film-desc {
+    font-weight: 600;
+    margin-top: 0;
+}
+
 .collection-btn {
     padding: .5rem 1rem;
     font-weight: bold;
