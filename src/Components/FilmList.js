@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { GenButton } from "./GenButton";
 
 function FilmList({
@@ -10,14 +10,19 @@ function FilmList({
   handleNextClick,
   handleReset,
 }) {
-  const renderFilms = films.map((film) => {
+  const { pathname } = useLocation();
+  const curFilm = Number(pathname.replace("/films/", ""));
+
+  const renderFilms = films.map((film, idx) => {
     const { Title, Language, Description, Director, Country, Year, Image } =
       film;
 
     const id = film.FIELD1;
+    const selected = id === curFilm;
+    console.log("selected: ", selected);
 
     return (
-      <div key={id}>
+      <div key={id} className={`film-card ${selected ? "selected" : ""}`}>
         <Link to={`/films/${id}`}>
           {<img src={Image} height="300" width="300" />}
         </Link>
@@ -30,19 +35,25 @@ function FilmList({
       <h2>Criterion Collection Films</h2>
       <br />
       {renderFilms}
-      <GenButton
-        handleClick={handlePreviousClick}
-        className="btn prev"
-        disabled={position === 0}
-        text="Previous Eight Films"
-      />
-      <GenButton handleClick={handleReset} className="btn reset" text="Reset" />
-      <GenButton
-        handleClick={handleNextClick}
-        disabled={position === numFilms - 8}
-        className="btn next"
-        text="Next Eight Films"
-      />
+      <div className="film-nav-buttons">
+        <GenButton
+          handleClick={handlePreviousClick}
+          className="btn prev"
+          disabled={position === 0}
+          text="Previous Eight Films"
+        />
+        <GenButton
+          handleClick={handleReset}
+          className="btn reset"
+          text="Reset"
+        />
+        <GenButton
+          handleClick={handleNextClick}
+          disabled={position === numFilms - 8}
+          className="btn next"
+          text="Next Eight Films"
+        />
+      </div>
     </div>
   );
 }

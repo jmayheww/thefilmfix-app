@@ -11,7 +11,6 @@ function FilmCard({
   image,
   id,
 }) {
-  console.log(id);
   return (
     <div className="film-card">
       <h4>{title}</h4>
