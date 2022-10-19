@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, useRouteMatch } from "react-router-dom";
+import { Redirect, Route, useRouteMatch } from "react-router-dom";
 import NewFilmForm from "./NewFilmForm";
 import Search from "./Search";
 import FilmList from "./FilmList";
@@ -9,6 +9,7 @@ function FilmPage({ films }) {
   const match = useRouteMatch();
   const [position, setPosition] = useState(0);
   const DISPLAY_COUNT = 8;
+  const [showDetails, setShowDetails] = useState([]);
 
   console.log(match);
 
@@ -31,12 +32,18 @@ function FilmPage({ films }) {
         <Search />
         <FilmList
           films={films.slice(position, position + DISPLAY_COUNT)}
+          numFilms={films.length}
+          position={position}
           handlePreviousClick={showPreviousFilms}
-          handleMoreClick={showMoreFilms}
+          handleNextClick={showMoreFilms}
           handleReset={resetFilms}
         />
         <Route path={`${match.url}/:filmId`}>
-          <FilmShow films={films} />
+          <FilmShow
+            films={films}
+            showDetails={showDetails}
+            setShowDetails={setShowDetails}
+          />
         </Route>
       </div>
     </main>

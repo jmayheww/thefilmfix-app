@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FilmCard from "./FilmCard";
-import MoreButton from "./MoreButton";
-import ResetButton from "./ResetButton";
-import PreviousButton from "./PreviousButton";
+import { GenButton } from "./GenButton";
 
 function FilmList({
   films,
+  position,
+  numFilms,
   handlePreviousClick,
-  handleMoreClick,
+  handleNextClick,
   handleReset,
 }) {
   const renderFilms = films.map((film) => {
@@ -31,9 +30,19 @@ function FilmList({
       <h2>Criterion Collection Films</h2>
       <br />
       {renderFilms}
-      <PreviousButton handlePreviousClick={handlePreviousClick} />
-      <ResetButton handleReset={handleReset} />
-      <MoreButton handleMoreClick={handleMoreClick} />
+      <GenButton
+        handleClick={handlePreviousClick}
+        className="btn prev"
+        disabled={position === 0}
+        text="Previous Eight Films"
+      />
+      <GenButton handleClick={handleReset} className="btn reset" text="Reset" />
+      <GenButton
+        handleClick={handleNextClick}
+        disabled={position === numFilms - 8}
+        className="btn next"
+        text="Next Eight Films"
+      />
     </div>
   );
 }
