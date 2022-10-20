@@ -5,7 +5,7 @@ import FilmList from "./FilmList";
 import FilmShow from "./FilmShow";
 import "./FilmPage.css";
 
-function FilmPage({ films }) {
+function FilmPage({ films, setFilms }) {
   const history = useHistory();
   const match = useRouteMatch();
   const [position, setPosition] = useState(0);
@@ -39,9 +39,11 @@ function FilmPage({ films }) {
 
   return (
     <main>
+      <div className="search">
+        <Search films={films} setFilms={setFilms} />
+      </div>
       <div className="films-container">
         <div className="scroll-container" ref={scrollerRef}>
-          <Search />
           <FilmList
             films={films.slice(position, position + DISPLAY_COUNT)}
             numFilms={films.length}

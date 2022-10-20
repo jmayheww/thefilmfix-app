@@ -34,7 +34,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/films">
-          <FilmPage films={films} />
+          <FilmPage films={films} setFilms={setFilms} />
         </Route>
         <Route path="/myaccount">
           <MyAccount
@@ -42,6 +42,7 @@ function App() {
             loggedUser={loggedUser}
             setIsLoggedIn={setIsLoggedIn}
             setLoggedUser={setLoggedUser}
+            // userData={userData}
           />
         </Route>
         <Route path="/myfilmslist">
@@ -52,6 +53,7 @@ function App() {
             isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
             loggedUser={loggedUser}
+            // userData={userData}
             setLoggedUser={setLoggedUser}
           />
         </Route>

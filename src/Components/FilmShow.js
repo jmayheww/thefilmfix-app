@@ -3,10 +3,6 @@ import { useParams } from "react-router-dom";
 import { GenButton } from "./GenButton";
 import { loginUrl, collectionUrl } from "../Utilities/api-helpers";
 
-const initialCollection = {
-  collection: [],
-};
-
 function FilmShow({ films }) {
   const params = useParams();
   const [curFilm, setCurFilm] = useState(0);
