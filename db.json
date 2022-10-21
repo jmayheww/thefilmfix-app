@@ -1,5 +1,11 @@
 {
-  "user-login": [],
+  "user-login": [
+    {
+      "username": "Derbie",
+      "password": "2222",
+      "id": 1
+    }
+  ],
   "user-collections": [
     {
       "id": 1,
@@ -33,6 +39,116 @@
           "Year": 1967,
           "Language": "French",
           "Image": "https://s3.amazonaws.com/criterion-production/films/2d01c1355a26b42297d80a960899c4f5/93Btri2IgKEjkVfyjMctarS9VtARHo_large.jpg"
+        },
+        {
+          "FIELD1": 1,
+          "Title": "3:10 to Yuma",
+          "Description": "In this beautifully shot, psychologically complex western, Van Heflin is a mild-mannered cattle rancher who takes on the task of shepherding a captured outlaw (played with cucumber-cool charisma by Glenn Ford) to the train that will deliver him to prison. This apparently simple mission turns into a nerve-racking cat-and-mouse game that tests each man’s particular brand of honor. Based on a story by Elmore Leonard,3:10 to Yumais a thrilling, humane action movie, directed by the supremely talented studio filmmaker Delmer Daves with intense feeling and precision.",
+          "Director": "Delmer Daves",
+          "Country": "United States",
+          "Year": 1957,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/ab1d9b806f1efe28878526241f632b9a/Zm61wXSmEUBWzzoMzmJOGYPvQ8Cg5v_large.jpg"
+        },
+        {
+          "FIELD1": 9,
+          "Title": "49th Parallel",
+          "Description": "At once a compelling piece of anti-isolationist propaganda and a quick-witted wartime thriller,49th Parallelis a classic early work from the inimitable British filmmaking team of Michael Powell and Emeric Pressburger. When a Nazi U-boat crew, headed by the ruthless Eric Portman, is stranded in Canada during the thick of World War II, the men evade capture by hiding out in a series of rural communities, before trying to cross the border into the still-neutral United States. Both soul-stirring and delightfully entertaining,49th Parallelfeatures a colorful cast of characters played by larger-than-life actors Laurence Olivier, Raymond Massey, Anton Walbrook, and Leslie Howard.",
+          "Director": "Michael Powell",
+          "Country": "United Kingdom",
+          "Year": 1941,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/da2032b3d3115969152fd4f442094cbd/yunzkLos81PnuwixO24PC6ZH8Nc4vM_large.jpg"
+        },
+        {
+          "FIELD1": 8,
+          "Title": "45 Years",
+          "Description": "In this exquisitely calibrated film, Charlotte Rampling and Tom Courtenay perform a subtly off-kilter pas de deux as Kate and Geoff, an English couple who, on the eve of an anniversary celebration, find their long marriage shaken by the arrival of a letter to Geoff that unceremoniously collapses his past into their shared present. Director Andrew Haigh carries the tradition of British realist cinema to artful new heights in45 Years,weaving the momentous into the mundane as the pair go about their daily lives, while the evocatively flat, wintry Norfolk landscape frames their struggle to maintain an increasingly untenable status quo. Loosely adapting a short story by David Constantine, Haigh shifts the focus from the slightly erratic Geoff to Kate, eliciting a remarkable, nuanced portrayal by Rampling of a woman’s gradual metamorphosis from unflappable wife to woman undone.",
+          "Director": "Andrew Haigh",
+          "Country": "United Kingdom",
+          "Year": 2015,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/30b643cfea431b3b50606249f145a888/RFDmoYxUdM1EcSWfagb3bhMvnINOWF_large.jpg"
+        },
+        {
+          "FIELD1": 10,
+          "Title": "100 Years of Olympic Films: 1912–2012",
+          "Description": "Spanning fifty-three movies and forty-one editions of the Olympic Games,100 Years of Olympic Films: 1912–2012is the culmination of a monumental, award-winning archival project encompassing dozens of new restorations by the International Olympic Committee. The documentaries collected here cast a cinematic eye on some of the most iconic moments in the history of modern sports, spotlighting athletes who embody the Olympic motto of “Faster, Higher, Stronger”: Jesse Owens shattering world records on the track in 1936 Berlin, Jean-Claude Killy dominating the Grenoble slopes in 1968, Joan Benoit breaking away to win the Games’ first women’s marathon in Los Angeles in 1984. In addition to the impressive ten-feature contribution of Bud Greenspan, this stirring collective chronicle of triumph and defeat includes such documentary landmarks as Leni Riefenstahl’sOlympiaand Kon Ichikawa’sTokyo Olympiad,along with captivating lesser-known works by major directors like Claude Lelouch, Carlos Saura, and Miloš Forman. It also offers a fascinating glimpse of the development of film itself, and of the technological progress that has brought viewers ever closer to the action. Traversing continents and decades, reflecting the social, cultural, and political changes that have shaped our recent history, this remarkable movie marathon showcases a hundred years of human endeavor.",
+          "Director": "",
+          "Country": "",
+          "Year": 0,
+          "Language": "",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/51412a295670524ffce1299968c379fd/Okb9pCnEQmV0faxMB7JmLrUTJQrvxx_large.jpg"
+        },
+        {
+          "FIELD1": 11,
+          "Title": "The 400 Blows",
+          "Description": "François Truffaut’s first feature is also his most personal. Told from the point of view of Truffaut’s cinematic counterpart, Antoine Doinel (Jean-Pierre Léaud),The 400 Blows(Les quatre cents coups) sensitively re-creates the trials of Truffaut’s own childhood, unsentimentally portraying aloof parents, oppressive teachers, and petty crime. The film marked Truffaut’s passage from leading critic to trailblazing auteur of the French New Wave.",
+          "Director": "François Truffaut",
+          "Country": "France",
+          "Year": 1959,
+          "Language": "French",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/6419fdfbf3442b70b449e2780ae6ac04/Jli0DzbsLXV9c4V1sPirW4n2Lw5FR8_large.jpg"
+        },
+        {
+          "FIELD1": 12,
+          "Title": "1984",
+          "Description": "This masterly adaptation of George Orwell’s chilling parable about totalitarian oppression gives harrowing cinematic expression to the book’s prophetic dystopia. In a rubble-strewn surveillance state where an endless overseas war props up the repressive regime of the all-seeing Big Brother, and all dissent is promptly squashed, a profoundly alienated citizen, Winston Smith (thrillingly played by John Hurt), risks everything for an illicit affair with the rebellious Julia (Suzanna Hamilton), defiantly asserting his humanity in the face of soul-crushing conformity. Through vividly grim production design and expressionistically desaturated cinematography by Roger Deakins, Michael Radford’s1984conjures a bleak vision of postwar Britain as fascistic nightmare—a world all too recognizable as our own.",
+          "Director": "Michael Radford",
+          "Country": "United Kingdom",
+          "Year": 1984,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/9b263f6358cf0bae18244c759d4592f0/BonyZ4taymxrfBiRqY6K42NBh0jsop_large.jpg"
+        },
+        {
+          "FIELD1": 13,
+          "Title": "Ace in the Hole",
+          "Description": "Billy Wilder’sAce in the Holeis one of the most scathing indictments of American culture ever produced by a Hollywood filmmaker. Kirk Douglas gives the fiercest performance of his career as Chuck Tatum, an amoral newspaper reporter who washes up in dead-end Albuquerque, happens upon the scoop of a lifetime, and will do anything to keep getting the lurid headlines. Wilder’s follow-up toSunset Boulevardis an even darker vision, a no-holds-barred exposé of the American media’s appetite for sensation that has gotten only more relevant with time.",
+          "Director": "Billy Wilder",
+          "Country": "United States",
+          "Year": 1951,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/2fe2ca53e58aeac665d09fae9748347f/3oBi9k9iUQzTspeg9nyJiO6UF2bPLA_large.jpg"
+        },
+        {
+          "FIELD1": 14,
+          "Title": "An Actor’s Revenge",
+          "Description": "A uniquely prolific and chameleonic figure of world cinema, Kon Ichikawa delivered a burst of stylistic bravado with this intricate tale of betrayal and retribution. Set in the cloistered world of nineteenth-century kabuki theater, the film charts a female impersonator’s attempts to avenge the deaths of his parents, who were driven to insanity and suicide by a trio of corrupt men. Ichikawa takes the conventions of melodrama and turns them on their head, bringing the hero’s fractured psyche to life in boldly experimental widescreen compositions infused with kaleidoscopic color, pop-art influences, and meticulous choreography. Anchored by a magnificently androgynous performance by Kazuo Hasegawa, reprising a role he had played on-screen three decades earlier,An Actor’s Revengeis an eye-popping examination of how the illusions of art intersect with life.",
+          "Director": "Kon Ichikawa",
+          "Country": "Japan",
+          "Year": 1963,
+          "Language": "Japanese",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/4b189bbc4839b45ecfee6d8546d303e6/KaW2t9UP1dYbpFxJDSlXEbSApZ8SaV_large.jpg"
+        },
+        {
+          "FIELD1": 33,
+          "Title": "The American Friend",
+          "Description": "Wim Wenders pays loving homage to rough-and-tumble Hollywood film noir withThe American Friend,a loose adaptation of Patricia Highsmith’s novelRipley’s Game.Dennis Hopper oozes quirky menace as an amoral American art dealer who entangles a terminally ill German everyman, played by Bruno Ganz, in a seedy criminal underworld as revenge for a personal slight—but when the two become embroiled in an ever-deepening murder plot, they form an unlikely bond. Filmed on location in Hamburg and Paris, with some scenes shot in grimy, late-seventies New York City, Wenders’s international breakout is a stripped-down crime story that mixes West German and American film flavors, and it features cameos by filmmakers Jean Eustache, Samuel Fuller, and Nicholas Ray.",
+          "Director": "Wim Wenders",
+          "Country": "Germany",
+          "Year": 1977,
+          "Language": "English,                                          French,                                          German",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/bfc170fd79de2f1298ae0115534a9594/YIHd0ub4uOeANf4KvdgkkwZFqg0p6D_large.jpg"
+        },
+        {
+          "FIELD1": 35,
+          "Title": "Le amiche",
+          "Description": "This major early achievement by Michelangelo Antonioni bears the first signs of the cinema-changing style for which he would soon be world-famous.Le amiche(The Girlfriends) is a brilliantly observed, fragmentary depiction of modern bourgeois life, conveyed from the perspective of five Turinese women. As four of the friends try to make sense of the suicide attempt of the fifth, they find themselves examining their own troubled romantic lives. With suggestions of the theme of modern alienation and the fastidious visual abstraction that would define his later masterpieces such asL’avventura, L’eclisse,andRed Desert,Antonioni’s film is a devastating take on doomed love and fraught friendship.Le amichewas restored by the Cineteca di Bologna at L’Immagine Ritrovata. Restoration funding provided by Gucci and The Film Foundation.",
+          "Director": "Michelangelo Antonioni",
+          "Country": "Italy",
+          "Year": 1955,
+          "Language": "Italian",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/58cac693035172b69c7684a7ae929829/dCY15ZqPrfGXF5TJsvMHuivIBO2sEg_large.jpg"
+        },
+        {
+          "FIELD1": 36,
+          "Title": "El amor brujo",
+          "Description": "The Flamenco Trilogy's most straightforward narrative is also its most forthrightly theatrical, a modern take on composer Manuel de Falla's gypsy ballet, dressed up in pink sunsets and hellishly red fires. Set in a dusty Andalusian village,El amor brujo(Love the Magician) is a seductive melodrama of a man (Antonio Gades) whose beloved is haunted by the ghost of another.",
+          "Director": "Carlos Saura",
+          "Country": "Spain",
+          "Year": 1986,
+          "Language": "Spanish",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/383d8a7d40762165ed0eeefb3f475755/7iG3D8YVVdC0EMhYGIyDR8lJaBudTD_large.jpg"
         }
       ]
     }

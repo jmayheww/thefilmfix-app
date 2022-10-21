@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Login from "./LogIn";
 import MyFilmsList from "./MyFilmsList";
 import "./MyAccount.css";
@@ -11,20 +11,31 @@ function MyAccount({
   setUserCollection,
 }) {
   return (
-    <div>
+    <div className="user-page">
       {!loggedUser ? (
         <Login setLoggedUser={setLoggedUser} />
       ) : (
-        <div className="myaccount">
-          <div className="logged-message">
-            <h3>{`Welcome back to The Film Fix App, ${loggedUser.username}.`}</h3>
-            <h5>Explore our extensive collection of Criterion Films.</h5>
+        <div className="user-content">
+          <h3 className="user-greeting">
+            Welcome back to The Film Fix App
+            <span>{loggedUser?.username ?? ""}</span>
+          </h3>
+
+          <div className="collection-container">
+            <h5 className="collection-title">My Film Collection</h5>
+            <ul className="user-collection">
+              <MyFilmsList
+                userCollection={userCollection}
+                setUserCollection={setUserCollection}
+              />
+            </ul>
           </div>
-          <div className="user-films-list">
-            <MyFilmsList
-              userCollection={userCollection}
-              setUserCollection={setUserCollection}
-            />
+          <div className="explore-more">
+            <h6>
+              Add to your collection by exploring our extensive collection of
+              Criterion Films.
+            </h6>
+            <Link to="/films">Visit Criterion Collection</Link>
           </div>
         </div>
       )}

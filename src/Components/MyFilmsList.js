@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { collectionUrl } from "../Utilities/api-helpers";
+import "./MyAccount.css";
 
 function MyFilmsList({ userCollection, setUserCollection }) {
   useEffect(() => {
@@ -11,15 +12,28 @@ function MyFilmsList({ userCollection, setUserCollection }) {
   const renderCollection = userCollection.map((film) => {
     const { Title, Image } = film;
 
+    function handleRemoveFromCollection() {
+      console.log("test");
+    }
+
     return (
-      <div className="collection-card" key={film.FIELD1}>
-        <h4>{Title}</h4>
-        <img src={Image} alt="user added film image" height="300" width="300" />
-      </div>
+      <li className="collection-item" key={film.FIELD1}>
+        <div
+          className="remove"
+          onClick={() => handleRemoveFromCollection(film.Title)}
+        >
+          <span>remove</span>
+          <span>&times</span>
+        </div>
+        <div className="img-wrap">
+          <img src={Image} alt={Title} />
+        </div>
+        <p>{Title}</p>
+      </li>
     );
   });
 
-  return <div className="collection-container">{renderCollection}</div>;
+  return <>{renderCollection}</>;
 }
 
 export default MyFilmsList;
