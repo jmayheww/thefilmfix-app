@@ -5,16 +5,18 @@ import FilmList from "./FilmList";
 import FilmShow from "./FilmShow";
 import "./FilmPage.css";
 
-function FilmPage({ films, setFilms }) {
+function FilmPage({ films, setFilms, userCollection, setUserCollection }) {
   const history = useHistory();
   const match = useRouteMatch();
   const [position, setPosition] = useState(0);
   const DISPLAY_COUNT = 8;
   const [showDetails, setShowDetails] = useState([]);
+  const [filterFilms, setFilterFilms] = useState([]);
   const scrollerRef = useRef(null);
 
   useEffect(() => {
     resetPageElements();
+    setFilterFilms(films);
   }, []);
 
   function resetPageElements(filmId = 0) {
@@ -35,13 +37,20 @@ function FilmPage({ films, setFilms }) {
   function resetFilms() {
     setPosition(0);
     resetPageElements();
+    setFilms((currentFilmState) => [...currentFilmState, films]);
   }
 
   return (
     <main>
       <div className="search">
-        <Search films={films} setFilms={setFilms} />
+        <Search
+          films={films}
+          setFilms={setFilms}
+          filterFilms={filterFilms}
+          setFilterFilms={setFilterFilms}
+        />
       </div>
+      <br />
       <div className="films-container">
         <div className="scroll-container" ref={scrollerRef}>
           <FilmList

@@ -6,7 +6,6 @@ function NavBar() {
     { name: "Home", url: "/" },
     { name: "My Account", url: "/myaccount" },
     { name: "Criterion Collection", url: "/films" },
-    { name: "My Criterion Films", url: "/myfilmslist" },
     { name: "Logout", url: "/logout" },
   ];
 

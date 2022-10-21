@@ -1,0 +1,12 @@
+.collection-container {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+}
+
+.collection-card {
+    margin: 1rem 0;
+    padding: .5rem;
+    border: 3px solid transparent;
+    transition: all .5s;
+}

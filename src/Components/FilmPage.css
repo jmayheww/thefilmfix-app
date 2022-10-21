@@ -4,6 +4,12 @@
     height: 85vh;
 }
 
+.collection-container {
+    display: flex;
+    flex-direction: row;
+    height: 85vh;
+}
+
 /* FILMS SCROLLER */
 .scroll-container {
     scroll-behavior: smooth;
@@ -64,6 +70,16 @@
 
 .btn.next {
     background-color: var(--color-positive);
+}
+
+.btn.reset-list {
+    background-color: var(--color-negative);
+    width: 15vw;
+}
+
+.btn.submit-search {
+    background-color: var(--color-positive);
+    width: 15vw;
 }
 
 .btn:disabled {

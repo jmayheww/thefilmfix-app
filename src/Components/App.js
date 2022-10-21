@@ -6,7 +6,6 @@ import { loginUrl, criterionFilmUrl } from "../Utilities/api-helpers";
 import Home from "./Home";
 import MyAccount from "./MyAccount";
 import FilmPage from "./FilmPage";
-import MyFilmsList from "./MyFilmsList";
 import NavBar from "./NavBar";
 import Logout from "./Logout";
 
@@ -27,8 +26,6 @@ function App() {
       .then((data) => setLoggedUser(data));
   }, []);
 
-  console.log(loggedUser);
-
   return (
     <div>
       <NavBar />
@@ -42,18 +39,13 @@ function App() {
             loggedUser={loggedUser}
             setIsLoggedIn={setIsLoggedIn}
             setLoggedUser={setLoggedUser}
-            // userData={userData}
           />
-        </Route>
-        <Route path="/myfilmslist">
-          <MyFilmsList />
         </Route>
         <Route path="/logout">
           <Logout
             isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
             loggedUser={loggedUser}
-            // userData={userData}
             setLoggedUser={setLoggedUser}
           />
         </Route>
