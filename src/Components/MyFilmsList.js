@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { collectionUrl } from "../Utilities/api-helpers";
 
-function MyFilmsList({ displayCollection, setDisplayCollection }) {
+function MyFilmsList({ userCollection, setUserCollection }) {
   useEffect(() => {
     fetch(collectionUrl)
       .then((resp) => resp.json())
-      .then((data) => setDisplayCollection(data[0].collection));
+      .then((data) => setUserCollection(data[0].collection));
   });
 
-  const renderCollection = displayCollection.map((film) => {
+  const renderCollection = userCollection.map((film) => {
     const { Title, Image } = film;
 
     return (

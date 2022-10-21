@@ -4,12 +4,6 @@
     height: 85vh;
 }
 
-.collection-container {
-    display: flex;
-    flex-direction: row;
-    height: 85vh;
-}
-
 /* FILMS SCROLLER */
 .scroll-container {
     scroll-behavior: smooth;

@@ -29,11 +29,10 @@ function Login({ setLoggedUser }) {
       body: JSON.stringify(newUser),
     })
       .then((resp) => resp.json())
-      .then((data) =>
-        setLoggedUser((currentUserState) => [data, ...currentUserState])
-      );
-
-    history.push("/");
+      .then((data) => {
+        setLoggedUser(data);
+        history.push("/");
+      });
   }
 
   return (

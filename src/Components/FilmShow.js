@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GenButton } from "./GenButton";
-import { loginUrl, collectionUrl } from "../Utilities/api-helpers";
+import {
+  loginUrl,
+  collectionUrl,
+  getCollectionData,
+} from "../Utilities/api-helpers";
 
-function FilmShow({ films }) {
+function FilmShow({ films, userCollection, setUserCollection, user }) {
   const params = useParams();
   const [curFilm, setCurFilm] = useState(0);
-  const [userCollection, setUserCollection] = useState([]);
   const [alreadyInCollection, setAlreadyInCollection] = useState(false);
 
   useEffect(() => {
-    fetch(collectionUrl)
-      .then((resp) => resp.json())
-      .then((data) => {
-        const collection = data[0].collection;
+    if (user) {
+      getCollectionData(user.id).then((data) => {
+        const collection = data.collection;
 
         setUserCollection(collection);
       });
-  }, []);
+    }
+  }, [user]);
 
   useEffect(() => {
-    console.log("userCollection CHANGED!: ", userCollection);
+
   }, [userCollection]);
 
   useEffect(() => {
@@ -30,11 +33,13 @@ function FilmShow({ films }) {
   }, [params]);
 
   useEffect(() => {
-    const filmFound = userCollection.some(({ Title }) => {
-      return Title === films[curFilm]?.Title;
-    });
+    if (userCollection) {
+      const filmFound = userCollection.some(({ Title }) => {
+        return Title === films[curFilm]?.Title;
+      });
 
-    setAlreadyInCollection(filmFound);
+      setAlreadyInCollection(filmFound);
+    }
   }, [userCollection, curFilm, films]);
 
   function updateCollection(updated) {
@@ -57,6 +62,8 @@ function FilmShow({ films }) {
           });
       });
   }
+
+
 
   function handleAddToCollection() {
     const newCollection = [...userCollection, films[curFilm]];

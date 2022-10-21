@@ -5,57 +5,60 @@ import FilmList from "./FilmList";
 import FilmShow from "./FilmShow";
 import "./FilmPage.css";
 
-function FilmPage({ films, setFilms, userCollection, setUserCollection }) {
+function FilmPage({
+  films,
+  setFilms,
+  userCollection,
+  setUserCollection,
+  user,
+}) {
   const history = useHistory();
   const match = useRouteMatch();
   const [position, setPosition] = useState(0);
   const DISPLAY_COUNT = 8;
-  const [showDetails, setShowDetails] = useState([]);
-  const [filterFilms, setFilterFilms] = useState([]);
+  const [filteredFilms, setFilteredFilms] = useState([]);
   const scrollerRef = useRef(null);
 
   useEffect(() => {
     resetPageElements();
-    setFilterFilms(films);
-  }, []);
+    setFilteredFilms(films);
+  }, [films]);
 
   function resetPageElements(filmId = 0) {
     history.push(`/films/${filmId}`);
-    scrollerRef.current.scrollTo(0, 0);
+    setTimeout(() => {
+      scrollerRef.current.scrollTo(0, 0);
+    }, 0);
+    document.querySelector(".search-input").value = "";
   }
 
   function showMoreFilms() {
-    setPosition((position + DISPLAY_COUNT) % films.length);
-    resetPageElements((position + DISPLAY_COUNT) % films.length);
+    setPosition((position + DISPLAY_COUNT) % filteredFilms.length);
+    resetPageElements((position + DISPLAY_COUNT) % filteredFilms.length);
   }
 
   function showPreviousFilms() {
-    setPosition((position - DISPLAY_COUNT) % films.length);
-    resetPageElements((position - DISPLAY_COUNT) % films.length);
+    setPosition((position - DISPLAY_COUNT) % filteredFilms.length);
+    resetPageElements((position - DISPLAY_COUNT) % filteredFilms.length);
   }
 
   function resetFilms() {
     setPosition(0);
     resetPageElements();
-    setFilms((currentFilmState) => [...currentFilmState, films]);
   }
 
   return (
     <main>
       <div className="search">
-        <Search
-          films={films}
-          setFilms={setFilms}
-          filterFilms={filterFilms}
-          setFilterFilms={setFilterFilms}
-        />
+        <Search films={films} setFilterFilms={setFilteredFilms} />
       </div>
       <br />
       <div className="films-container">
         <div className="scroll-container" ref={scrollerRef}>
           <FilmList
-            films={films.slice(position, position + DISPLAY_COUNT)}
-            numFilms={films.length}
+            films={filteredFilms.slice(position, position + DISPLAY_COUNT)}
+            numFilms={filteredFilms.length}
+            displayCount={DISPLAY_COUNT}
             position={position}
             handlePreviousClick={showPreviousFilms}
             handleNextClick={showMoreFilms}
@@ -66,8 +69,9 @@ function FilmPage({ films, setFilms, userCollection, setUserCollection }) {
           <Route path={`${match.url}/:filmId`}>
             <FilmShow
               films={films}
-              showDetails={showDetails}
-              setShowDetails={setShowDetails}
+              userCollection={userCollection}
+              setUserCollection={setUserCollection}
+              user={user}
             />
           </Route>
         </div>

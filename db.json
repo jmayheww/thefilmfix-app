@@ -1,25 +1,9 @@
 {
-  "user-login": [
-    {
-      "username": "Derbie",
-      "password": "eeee",
-      "id": 1
-    }
-  ],
+  "user-login": [],
   "user-collections": [
     {
       "id": 1,
       "collection": [
-        {
-          "FIELD1": 2,
-          "Title": "3 Women",
-          "Description": "In a dusty, underpopulated California resort town, a naive southern waif, Pinky Rose (Sissy Spacek), idolizes and befriends her fellow nurse, the would-be sophisticate and “thoroughly modern” Millie Lammoreaux (Shelley Duvall). When Millie takes Pinky in as her roommate, Pinky’s hero worship evolves into something far stranger and more sinister than either could have anticipated. Featuring brilliant performances from Spacek and Duvall, this dreamlike masterpiece from Robert Altman careens from the humorous to the chilling to the surreal, resulting in one of the most unusual and compelling films of the 1970s.",
-          "Director": "Robert Altman",
-          "Country": "United States",
-          "Year": 1977,
-          "Language": "English",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/75466150cfc0b49b10f051e0c239f3fc/1rrp8R9m37AAxe9ctq9TFKwyYOQ8jW_large.jpg"
-        },
         {
           "FIELD1": 3,
           "Title": "4 Months, 3 Weeks and 2 Days",
@@ -39,6 +23,16 @@
           "Year": 1963,
           "Language": "German,                                          English,                                          French,                                          Italian",
           "Image": "https://s3.amazonaws.com/criterion-production/films/2ae55be0d1938dcd30082006b5108053/EBSPG1J9ip2HjvJtUmzlDGLM9EtTFX_large.jpg"
+        },
+        {
+          "FIELD1": 0,
+          "Title": "2 or 3 Things I Know About Her",
+          "Description": "In 2 or 3 Things I Know About Her(2 ou 3 choses que je sais d’elle), Jean-Luc Godard beckons us ever closer, whispering in our ears as narrator. About what? Money, sex, fashion, the city, love, language, war: in a word, everything. Among the legendary French filmmaker’s finest achievements, the film takes as its ostensible subject the daily life of Juliette Janson (Marina Vlady), a housewife from the Paris suburbs who prostitutes herself for extra money. Yet this is only a template for Godard to spin off into provocative philosophical tangents and gorgeous images.2 or 3 Things I Know About Her is perhaps Godard’s most revelatory look at consumer culture, shot in ravishing widescreen color by Raoul Coutard.",
+          "Director": "Jean-Luc Godard",
+          "Country": "France",
+          "Year": 1967,
+          "Language": "French",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/2d01c1355a26b42297d80a960899c4f5/93Btri2IgKEjkVfyjMctarS9VtARHo_large.jpg"
         }
       ]
     }

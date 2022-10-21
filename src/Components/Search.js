@@ -1,12 +1,8 @@
 import React, { useState } from "react";
 import { GenButton } from "./GenButton";
 
-function Search({ films, setFilms, filterFilms, setFilterFilms }) {
+function Search({ films, setFilterFilms }) {
   const [userSearchInput, setUserSearchInput] = useState("");
-
-  const filterFilmsByTitle = films.filter((film) => {
-    return film.Title.toLowerCase().includes(userSearchInput);
-  });
 
   function handleChange(e) {
     setUserSearchInput(e.target.value);
@@ -14,11 +10,15 @@ function Search({ films, setFilms, filterFilms, setFilterFilms }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setFilms(filterFilmsByTitle);
-  }
 
-  function handleReset() {
-    setFilms(films);
+    const filterFilmsByTitle = films.filter((film) => {
+      const titleWords = film.Title.toLowerCase().split(" ");
+      const caseSearchedTerm = userSearchInput.toLowerCase();
+
+      return titleWords.includes(caseSearchedTerm);
+    });
+
+    setFilterFilms(filterFilmsByTitle);
   }
 
   return (
@@ -30,15 +30,11 @@ function Search({ films, setFilms, filterFilms, setFilterFilms }) {
             name="searchtitles"
             value={userSearchInput.searchtitles}
             placeholder="Search for film by title"
+            className="search-input"
             onChange={handleChange}
           />
         </div>
         <GenButton type="submit" text="Submit" className=" btn submit-search" />
-        <GenButton
-          text="Reset"
-          className="btn reset-list"
-          handleClick={handleReset}
-        />
       </form>
     </>
   );

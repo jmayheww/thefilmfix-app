@@ -5,6 +5,7 @@ import { GenButton } from "./GenButton";
 function FilmList({
   films,
   position,
+  displayCount,
   numFilms,
   handlePreviousClick,
   handleNextClick,
@@ -14,12 +15,11 @@ function FilmList({
   const curFilm = Number(pathname.replace("/films/", ""));
 
   const renderFilms = films.map((film, idx) => {
-    const { Title, Language, Description, Director, Country, Year, Image } =
-      film;
+    const { Image } = film;
 
     const id = film.FIELD1;
     const selected = id === curFilm;
-    console.log("selected: ", selected);
+
 
     return (
       <div key={id} className={`film-card ${selected ? "selected" : ""}`}>
@@ -35,24 +35,35 @@ function FilmList({
       <h1>Criterion Collection Films</h1>
       <br />
       {renderFilms}
-      <div className="film-nav-buttons">
-        <GenButton
-          handleClick={handlePreviousClick}
-          className="btn prev"
-          disabled={position === 0}
-          text="Previous Eight Films"
-        />
-        <GenButton
-          handleClick={handleReset}
-          className="btn reset"
-          text="Reset"
-        />
-        <GenButton
-          handleClick={handleNextClick}
-          disabled={position === numFilms - 8}
-          className="btn next"
-          text="Next Eight Films"
-        />
+      <div className="film-nav-bottom">
+        <div className="page-indication">
+          <span>
+            {position} -
+            {position + displayCount > numFilms
+              ? numFilms
+              : position + displayCount}
+            of {numFilms}
+          </span>
+        </div>
+        <div className="film-nav-buttons">
+          <GenButton
+            handleClick={handlePreviousClick}
+            className="btn prev"
+            disabled={position === 0}
+            text="Previous Eight Films"
+          />
+          <GenButton
+            handleClick={handleReset}
+            className="btn reset"
+            text="Reset"
+          />
+          <GenButton
+            handleClick={handleNextClick}
+            disabled={position === numFilms - 8}
+            className="btn next"
+            text="Next Eight Films"
+          />
+        </div>
       </div>
     </div>
   );

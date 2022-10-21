@@ -1,30 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { loginUrl } from "../Utilities/api-helpers";
 
 function Logout({ setLoggedUser, loggedUser }) {
-  const [updateLogin, setUpdateLogin] = useState([]);
+  const [updateLogin, setUpdateLogin] = useState(null);
 
-  const loggedUserName = loggedUser.map((user) => user.username);
-  const loggedId = loggedUser.map((user) => user.id);
-
-  console.log(loggedUser);
+  useEffect(() => {
+    console.log("loggedUser: ", loggedUser);
+  }, [loggedUser]);
 
   function handleLogout() {
-    fetch(`${loginUrl}/${loggedId}`, {
+    fetch(`${loginUrl}/${loggedUser.id}`, {
       method: "DELETE",
     })
       .then((resp) => resp.json())
-      .then((data) =>
-        setUpdateLogin((currentUserLoginState) => [currentUserLoginState, data])
-      );
+      .then((data) => {
+        setUpdateLogin(data);
+      });
 
     setLoggedUser(updateLogin);
   }
 
   return (
     <div className="logout">
-      {loggedUser.length <= 0 ? (
+      {!loggedUser ? (
         <div>
           <h3>You are not currently signed in.</h3>
           <Link to="/">
@@ -33,7 +32,7 @@ function Logout({ setLoggedUser, loggedUser }) {
         </div>
       ) : (
         <div>
-          <h1>{`Thanks ${loggedUserName} for coming to The Film Fix`}</h1>
+          <h1>{`Thanks ${loggedUser.username} for coming to The Film Fix`}</h1>
           <button onClick={handleLogout}>Logout</button>
         </div>
       )}

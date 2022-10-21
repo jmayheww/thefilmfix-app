@@ -1,7 +1,11 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import { loginUrl, criterionFilmUrl } from "../Utilities/api-helpers";
+import {
+  getFilmData,
+  getLoginData,
+  getCollectionData,
+} from "../Utilities/api-helpers";
 
 import Home from "./Home";
 import MyAccount from "./MyAccount";
@@ -11,50 +15,48 @@ import Logout from "./Logout";
 
 function App() {
   const [films, setFilms] = useState([]);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [loggedUser, setLoggedUser] = useState([]);
+  const [loggedUser, setLoggedUser] = useState(null);
+  const [userCollection, setUserCollection] = useState([]);
 
   useEffect(() => {
-    fetch(criterionFilmUrl)
-      .then((resp) => resp.json())
-      .then((data) => setFilms(data));
+    getFilmData().then((data) => setFilms(data));
+    getLoginData().then((data) => setLoggedUser(data[0]));
   }, []);
 
   useEffect(() => {
-    fetch(loginUrl)
-      .then((resp) => resp.json())
-      .then((data) => setLoggedUser(data));
-  }, []);
+    if (loggedUser) {
+      getCollectionData(loggedUser.id).then((data) =>
+        setUserCollection(data.collection)
+      );
+    }
+  }, [loggedUser]);
 
   return (
     <div>
       <NavBar />
       <Switch>
         <Route path="/films">
-          <FilmPage films={films} setFilms={setFilms} />
+          <FilmPage
+            films={films}
+            setFilms={setFilms}
+            userCollection={userCollection}
+            setUserCollection={setUserCollection}
+            user={loggedUser}
+          />
         </Route>
         <Route path="/myaccount">
           <MyAccount
-            isLoggedIn={isLoggedIn}
             loggedUser={loggedUser}
-            setIsLoggedIn={setIsLoggedIn}
             setLoggedUser={setLoggedUser}
+            userCollection={userCollection}
+            setUserCollection={setUserCollection}
           />
         </Route>
         <Route path="/logout">
-          <Logout
-            isLoggedIn={isLoggedIn}
-            setIsLoggedIn={setIsLoggedIn}
-            loggedUser={loggedUser}
-            setLoggedUser={setLoggedUser}
-          />
+          <Logout loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
         </Route>
         <Route exact path="/">
-          <Home
-            isLoggedIn={isLoggedIn}
-            setIsLoggedIn={setIsLoggedIn}
-            loggedUser={loggedUser}
-          />
+          <Home loggedUser={loggedUser} />
         </Route>
       </Switch>
     </div>
