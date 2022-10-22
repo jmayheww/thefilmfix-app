@@ -9,6 +9,8 @@ function MyAccount({
   setLoggedUser,
   userCollection,
   setUserCollection,
+  setCurFilm,
+  handleRemoveFromCollection,
 }) {
   return (
     <div className="user-page">
@@ -27,6 +29,8 @@ function MyAccount({
               <MyFilmsList
                 userCollection={userCollection}
                 setUserCollection={setUserCollection}
+                handleRemoveFromCollection={handleRemoveFromCollection}
+                setCurFilm={setCurFilm}
               />
             </ul>
           </div>

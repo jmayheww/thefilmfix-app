@@ -11,6 +11,10 @@ function FilmPage({
   userCollection,
   setUserCollection,
   user,
+  curFilm,
+  setCurFilm,
+  handleAddToCollection,
+  handleRemoveFromCollection,
 }) {
   const history = useHistory();
   const match = useRouteMatch();
@@ -28,7 +32,7 @@ function FilmPage({
     history.push(`/films/${filmId}`);
     setTimeout(() => {
       scrollerRef.current.scrollTo(0, 0);
-    }, 0);
+    }, 100);
     document.querySelector(".search-input").value = "";
   }
 
@@ -43,6 +47,7 @@ function FilmPage({
   }
 
   function resetFilms() {
+    setFilteredFilms(films);
     setPosition(0);
     resetPageElements();
   }
@@ -72,6 +77,10 @@ function FilmPage({
               userCollection={userCollection}
               setUserCollection={setUserCollection}
               user={user}
+              curFilm={curFilm}
+              setCurFilm={setCurFilm}
+              handleAddToCollection={handleAddToCollection}
+              handleRemoveFromCollection={handleRemoveFromCollection}
             />
           </Route>
         </div>

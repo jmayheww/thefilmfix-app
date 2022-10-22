@@ -1,10 +1,12 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import {
   getFilmData,
   getLoginData,
   getCollectionData,
+  updateCollection,
 } from "../Utilities/api-helpers";
 
 import Home from "./Home";
@@ -17,6 +19,7 @@ function App() {
   const [films, setFilms] = useState([]);
   const [loggedUser, setLoggedUser] = useState(null);
   const [userCollection, setUserCollection] = useState([]);
+  const [curFilm, setCurFilm] = useState(0);
 
   useEffect(() => {
     getFilmData().then((data) => setFilms(data));
@@ -31,6 +34,29 @@ function App() {
     }
   }, [loggedUser]);
 
+  function handleAddToCollection() {
+    const newCollection = [...userCollection, films[curFilm]];
+    // updateCollection(newCollection).then((data) => {
+    //   setUserCollection(data);
+    // });
+    updateCollection(newCollection).then((data) => {
+      setUserCollection(data.collection);
+    });
+  }
+
+  function handleRemoveFromCollection(titleToDelete = films[curFilm].Title) {
+    const newCollection = userCollection.filter(({ Title }) => {
+      console.log("titel", titleToDelete);
+      return Title !== titleToDelete;
+    });
+    updateCollection(newCollection).then((data) => {
+      setUserCollection(data.collection);
+    });
+    // updateCollection(newCollection).then((data) => {
+    //   setUserCollection(data);
+    // });
+  }
+
   return (
     <div>
       <NavBar />
@@ -42,6 +68,10 @@ function App() {
             userCollection={userCollection}
             setUserCollection={setUserCollection}
             user={loggedUser}
+            curFilm={curFilm}
+            setCurFilm={setCurFilm}
+            handleAddToCollection={handleAddToCollection}
+            handleRemoveFromCollection={handleRemoveFromCollection}
           />
         </Route>
         <Route path="/myaccount">
@@ -50,6 +80,8 @@ function App() {
             setLoggedUser={setLoggedUser}
             userCollection={userCollection}
             setUserCollection={setUserCollection}
+            setCurFilm={setCurFilm}
+            handleRemoveFromCollection={handleRemoveFromCollection}
           />
         </Route>
         <Route path="/logout">
