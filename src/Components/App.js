@@ -1,6 +1,5 @@
 import { Route, Switch } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 
 import {
   getFilmData,
@@ -36,9 +35,7 @@ function App() {
 
   function handleAddToCollection() {
     const newCollection = [...userCollection, films[curFilm]];
-    // updateCollection(newCollection).then((data) => {
-    //   setUserCollection(data);
-    // });
+
     updateCollection(newCollection).then((data) => {
       setUserCollection(data.collection);
     });
@@ -52,9 +49,6 @@ function App() {
     updateCollection(newCollection).then((data) => {
       setUserCollection(data.collection);
     });
-    // updateCollection(newCollection).then((data) => {
-    //   setUserCollection(data);
-    // });
   }
 
   return (
@@ -85,7 +79,11 @@ function App() {
           />
         </Route>
         <Route path="/logout">
-          <Logout loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
+          <Logout
+            loggedUser={loggedUser}
+            setLoggedUser={setLoggedUser}
+            setUserCollection={setUserCollection}
+          />
         </Route>
         <Route exact path="/">
           <Home loggedUser={loggedUser} />

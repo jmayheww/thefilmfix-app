@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Redirect, Route, useHistory, useRouteMatch } from "react-router-dom";
+import { Route, useHistory, useRouteMatch } from "react-router-dom";
 import Search from "./Search";
 import FilmList from "./FilmList";
 import FilmShow from "./FilmShow";
@@ -7,7 +7,6 @@ import "./FilmPage.css";
 
 function FilmPage({
   films,
-  setFilms,
   userCollection,
   setUserCollection,
   user,

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { GenButton } from "./GenButton";
-import {
-  loginUrl,
-  collectionUrl,
-  getCollectionData,
-} from "../Utilities/api-helpers";
+import { getCollectionData } from "../Utilities/api-helpers";
 
 function FilmShow({
   films,
@@ -47,39 +43,6 @@ function FilmShow({
       setAlreadyInCollection(filmFound);
     }
   }, [userCollection, curFilm, films]);
-
-  // function updateCollection(updated) {
-  //   fetch(loginUrl)
-  //     .then((resp) => resp.json())
-  //     .then((data) => {
-  //       const userId = data[0].id;
-  //       fetch(`${collectionUrl}/${userId}`, {
-  //         method: "PATCH",
-  //         headers: {
-  //           "COntent-Type": "application/json",
-  //         },
-  //         body: JSON.stringify({
-  //           collection: updated,
-  //         }),
-  //       })
-  //         .then((resp) => resp.json())
-  //         .then((data) => {
-  //           setUserCollection(data.collection);
-  //         });
-  //     });
-  // }
-
-  // function handleAddToCollection() {
-  //   const newCollection = [...userCollection, films[curFilm]];
-  //   updateCollection(newCollection);
-  // }
-
-  // function handleRemoveFromCollection() {
-  //   const newCollection = userCollection.filter(({ Title }) => {
-  //     return Title !== films[curFilm].Title;
-  //   });
-  //   updateCollection(newCollection);
-  // }
 
   return (
     <div className="film-details">

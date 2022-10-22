@@ -4,9 +4,9 @@ import { Redirect } from "react-router-dom";
 function Home({ loggedUser }) {
   if (!loggedUser) return <Redirect to="/myaccount" />;
 
-
   return (
     <div className="home">
+      <h2>The Film Fix</h2>
       <img
         src="https://pbs.twimg.com/media/FFrrTvAXIAQNV9t?format=jpg&name=4096x4096"
         alt="Godard proclaiming his addiction to cinema"

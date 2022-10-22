@@ -1,7 +1,7 @@
 {
   "user-login": [
     {
-      "username": "Derbie",
+      "username": "Herbie",
       "password": "2222",
       "id": 1
     }
@@ -9,108 +9,7 @@
   "user-collections": [
     {
       "id": 1,
-      "collection": [
-        {
-          "FIELD1": 1,
-          "Title": "3:10 to Yuma",
-          "Description": "In this beautifully shot, psychologically complex western, Van Heflin is a mild-mannered cattle rancher who takes on the task of shepherding a captured outlaw (played with cucumber-cool charisma by Glenn Ford) to the train that will deliver him to prison. This apparently simple mission turns into a nerve-racking cat-and-mouse game that tests each man’s particular brand of honor. Based on a story by Elmore Leonard,3:10 to Yumais a thrilling, humane action movie, directed by the supremely talented studio filmmaker Delmer Daves with intense feeling and precision.",
-          "Director": "Delmer Daves",
-          "Country": "United States",
-          "Year": 1957,
-          "Language": "English",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/ab1d9b806f1efe28878526241f632b9a/Zm61wXSmEUBWzzoMzmJOGYPvQ8Cg5v_large.jpg"
-        },
-        {
-          "FIELD1": 2,
-          "Title": "3 Women",
-          "Description": "In a dusty, underpopulated California resort town, a naive southern waif, Pinky Rose (Sissy Spacek), idolizes and befriends her fellow nurse, the would-be sophisticate and “thoroughly modern” Millie Lammoreaux (Shelley Duvall). When Millie takes Pinky in as her roommate, Pinky’s hero worship evolves into something far stranger and more sinister than either could have anticipated. Featuring brilliant performances from Spacek and Duvall, this dreamlike masterpiece from Robert Altman careens from the humorous to the chilling to the surreal, resulting in one of the most unusual and compelling films of the 1970s.",
-          "Director": "Robert Altman",
-          "Country": "United States",
-          "Year": 1977,
-          "Language": "English",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/75466150cfc0b49b10f051e0c239f3fc/1rrp8R9m37AAxe9ctq9TFKwyYOQ8jW_large.jpg"
-        },
-        {
-          "FIELD1": 3,
-          "Title": "4 Months, 3 Weeks and 2 Days",
-          "Description": "Romanian filmmaker Cristian Mungiu shot to international prominence with this rigorously realistic Palme d’Or–winning second feature. In 1987, during the dictatorship of Nicolae Ceaușescu, college roommates Otilia (Anamaria Marinca) and Găbița (Laura Vasiliu) seek an illegal abortion for Găbița. In unflinching but empathetic detail, the film recounts the events of twenty-four perilous hours in their lives, culminating in their encounter with a manipulative and menacing abortionist (Vlad Ivanov). With powerful performances that accentuate the characters’ flawed humanity,4 Months, 3 Weeks and 2 Daysis a gutting account of the impossible choices women face when taking control of their bodies means breaking the law.",
-          "Director": "Cristian Mungiu",
-          "Country": "Romania",
-          "Year": 2007,
-          "Language": "Romanian",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/65395fe8adf90ac719ea54fb460176fa/l2Q2n24ks84HZnVyuZvxqzIJk55lgR_large.jpg"
-        },
-        {
-          "FIELD1": 4,
-          "Title": "8½",
-          "Description": "Marcello Mastroianni plays Guido Anselmi, a director whose new project is collapsing around him, along with his life. One of the greatest films about film ever made, Federico Fellini’s8½(Otto e mezzo) turns one man’s artistic crisis into a grand epic of the cinema. An early working title for8½wasThe Beautiful Confusion,and Fellini’s masterpiece is exactly that: a shimmering dream, a circus, and a magic act.",
-          "Director": "Federico Fellini",
-          "Country": "Italy,                                              France",
-          "Year": 1963,
-          "Language": "German,                                          English,                                          French,                                          Italian",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/2ae55be0d1938dcd30082006b5108053/EBSPG1J9ip2HjvJtUmzlDGLM9EtTFX_large.jpg"
-        },
-        {
-          "FIELD1": 5,
-          "Title": "12 Angry Men",
-          "Description": "12 Angry Men,by Sidney Lumet, may be the most radical courtroom drama in cinema history. A behind-closed-doors look at the American legal system that is as riveting as it is spare, this iconic adaptation of Reginald Rose’s teleplay stars Henry Fonda as the dissenting member on a jury of white men ready to pass judgment on a Puerto Rican teenager charged with murdering his father. The result is a saga of epic proportions that plays out over a tense afternoon in one sweltering room. Lumet’s electrifying snapshot of 1950s America on the verge of change is one of the great feature film debuts.",
-          "Director": "Sidney Lumet",
-          "Country": "United States",
-          "Year": 1957,
-          "Language": "English",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/b64d8d6785c12ae24b029f8b625c3c1a/PMLyOniHrRG3nyansZSwJxghltbxsC_large.jpg"
-        },
-        {
-          "FIELD1": 15,
-          "Title": "Adventures of Zatoichi",
-          "Description": "The blind swordsman wanders into a town to celebrate the New Year. There, he befriends a young woman whose father has gone missing; as he tries to help her find him, he becomes entangled in a web of corruption and a series of tragic twists of fate. Returning director Kimiyoshi Yasuda and screenwriter Shozaburo Asai masterfully weave together a variety of narrative threads and tonal registers, all while playfully tweaking the conventions and motifs of the series.",
-          "Director": "Kimiyoshi Yasuda",
-          "Country": "Japan",
-          "Year": 1964,
-          "Language": "Japanese",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/c5ea12e9c68aa70a39d68b54ce945433/o0lBuGTV4QK4mfcnFLXe8Vxq7EzMrW_large.jpg"
-        },
-        {
-          "FIELD1": 7,
-          "Title": "The 39 Steps",
-          "Description": "A heart-racing spy story by Alfred Hitchcock,The 39 Stepsfollows Richard Hannay (Robert Donat) as he stumbles upon a conspiracy that thrusts him into a hectic chase across the Scottish moors—a chase in which he is both the pursuer and the pursued—as well as into an unexpected romance with the cool Pamela (Madeline Carroll). Adapted from a novel by John Buchan, this classic wrong-man thriller from the Master of Suspense anticipates the director’s most famous works (especiallyNorth by Northwest), and remains one of his cleverest and most entertaining films.",
-          "Director": "Alfred Hitchcock",
-          "Country": "United Kingdom",
-          "Year": 1935,
-          "Language": "English",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/aacbf709cba74e607ae657b7ea6ff1cf/2jsGvFmN8GvcK82SeP32fOu0YpUx1i_large.jpg"
-        },
-        {
-          "FIELD1": 1244,
-          "Title": "Zatoichi’s Revenge",
-          "Description": "Nearing the village of his sensei, Zatoichi decides to pay the teacher a visit, only to learn that he has been murdered and his daughter forced into prostitution. Ichi’s investigation into these injustices uncovers a corrupt alliance between government officials and criminals, putting the blind swordsman on a bloody path of retribution in one of the series’ darkest entries.",
-          "Director": "Akira Inoue",
-          "Country": "Japan",
-          "Year": 1965,
-          "Language": "Japanese",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/c843e10ded9d547c8f1996012140b58b/KW0pFMBe2u60vjTtDjf2MiOMTfytam_large.jpg"
-        },
-        {
-          "FIELD1": 0,
-          "Title": "2 or 3 Things I Know About Her",
-          "Description": "In 2 or 3 Things I Know About Her(2 ou 3 choses que je sais d’elle), Jean-Luc Godard beckons us ever closer, whispering in our ears as narrator. About what? Money, sex, fashion, the city, love, language, war: in a word, everything. Among the legendary French filmmaker’s finest achievements, the film takes as its ostensible subject the daily life of Juliette Janson (Marina Vlady), a housewife from the Paris suburbs who prostitutes herself for extra money. Yet this is only a template for Godard to spin off into provocative philosophical tangents and gorgeous images.2 or 3 Things I Know About Her is perhaps Godard’s most revelatory look at consumer culture, shot in ravishing widescreen color by Raoul Coutard.",
-          "Director": "Jean-Luc Godard",
-          "Country": "France",
-          "Year": 1967,
-          "Language": "French",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/2d01c1355a26b42297d80a960899c4f5/93Btri2IgKEjkVfyjMctarS9VtARHo_large.jpg"
-        },
-        {
-          "FIELD1": 14,
-          "Title": "An Actor’s Revenge",
-          "Description": "A uniquely prolific and chameleonic figure of world cinema, Kon Ichikawa delivered a burst of stylistic bravado with this intricate tale of betrayal and retribution. Set in the cloistered world of nineteenth-century kabuki theater, the film charts a female impersonator’s attempts to avenge the deaths of his parents, who were driven to insanity and suicide by a trio of corrupt men. Ichikawa takes the conventions of melodrama and turns them on their head, bringing the hero’s fractured psyche to life in boldly experimental widescreen compositions infused with kaleidoscopic color, pop-art influences, and meticulous choreography. Anchored by a magnificently androgynous performance by Kazuo Hasegawa, reprising a role he had played on-screen three decades earlier,An Actor’s Revengeis an eye-popping examination of how the illusions of art intersect with life.",
-          "Director": "Kon Ichikawa",
-          "Country": "Japan",
-          "Year": 1963,
-          "Language": "Japanese",
-          "Image": "https://s3.amazonaws.com/criterion-production/films/4b189bbc4839b45ecfee6d8546d303e6/KaW2t9UP1dYbpFxJDSlXEbSApZ8SaV_large.jpg"
-        }
-      ]
+      "collection": []
     }
   ],
   "criterion-database": [
