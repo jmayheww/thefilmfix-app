@@ -16,20 +16,18 @@ function Home({ loggedUser }) {
           width="800"
           height="600"
         />
-        <h4>Let <span><i>thefilmfix</i></span> </h4>
+        <h4>
+          Let{" "}
+          <span>
+            <i>thefilmfix</i>
+          </span>{" "}
+        </h4>
       </div>
       <p>
         <span>thefilmfix</span> app is dedicated to helping wayward film buffs,
         enthusiasts, afficionados, addicts, and fanatics find their next film
         "fix".
       </p>
-
-      <h3>
-        Search our Criterion Films collection for your desperately wanting "fix"
-        of transcendent film experiences that invariably provoke, compel,
-        uplift, inspire, devastate, challenge, and wholly transform who you are.
-      </h3>
-      <h3></h3>
     </div>
   );
 }

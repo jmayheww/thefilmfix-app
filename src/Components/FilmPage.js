@@ -15,8 +15,6 @@ function FilmPage({
   setCurFilm,
   handleAddToCollection,
   handleRemoveFromCollection,
-  alreadyInCollection,
-  setAlreadyInCollection,
 }) {
   const history = useHistory();
   const match = useRouteMatch();
@@ -84,8 +82,6 @@ function FilmPage({
               setCurFilm={setCurFilm}
               handleAddToCollection={handleAddToCollection}
               handleRemoveFromCollection={handleRemoveFromCollection}
-              alreadyInCollection={alreadyInCollection}
-              setAlreadyInCollection={setAlreadyInCollection}
             />
           </Route>
         </div>

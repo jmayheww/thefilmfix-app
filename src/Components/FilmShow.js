@@ -13,10 +13,9 @@ function FilmShow({
   setCurFilm,
   handleAddToCollection,
   handleRemoveFromCollection,
-  alreadyInCollection,
-  setAlreadyInCollection,
 }) {
   const params = useParams();
+  const [alreadyInCollection, setAlreadyInCollection] = useState(false);
 
   useEffect(() => {
     if (user) {

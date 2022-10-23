@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { loginUrl, collectionUrl } from "../Utilities/api-helpers";
 
-function Logout({ setLoggedUser, loggedUser, setAlreadyInCollection }) {
+function Logout({ setLoggedUser, loggedUser }) {
   const [updateLogin, setUpdateLogin] = useState(null);
   const [removeCollection, setRemoveCollection] = useState({});
 
@@ -31,7 +31,6 @@ function Logout({ setLoggedUser, loggedUser, setAlreadyInCollection }) {
       .then((resp) => resp.json())
       .then((data) => {
         console.log("data: ", data);
-        setAlreadyInCollection(false);
       });
   }
 
