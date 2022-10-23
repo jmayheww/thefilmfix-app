@@ -1,7 +1,7 @@
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
-<p align="center">
+<p align="center"> A simple, yet comprehensive film directory</p>
 
-# A simple, yet comprehensive film directory
+<p align="center">
 
 > Let _thefilmfix_ guide you to your next desperately wanting "fix" of sublime film experience
 
