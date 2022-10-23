@@ -1,17 +1,25 @@
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
-<p>
+<p align="center">
 
 # A simple, yet comprehensive film directory
 
-> Let *thefilmfix* guide you to your next desperately wanting "fix" of transcendent film experience
+> Let _thefilmfix_ guide you to your next desperately wanting "fix" of sublime film experience
+
+</p>
+
+<p>
 
 ## Project Philosophy
 
-This project is motivated by an irrepresible desire to foster wider audience engagement and communion with films that provoke, compel, uplift, inspire, subvert, devastate, challenge, and transform the human experience.
+Film is a powerful and transcendent medium that captures, enriches and nourishes our human experience. This project is thus motivated by an irrepresible desire to foster wider audience engagement and communion with films and experiences that provoke, compel, uplift, inspire, subvert, devastate, challenge, and transform our lives.
 
 ## General User Experience
 
-The world is a vast and incredibly diverse place. This app makes it simple for users to search for cities from any continent or country and subsequently view a concise summary of city facts, a list of quality of life scores, and an overall aggregate city score for the selected city. Users can also select a second city to view alongside their first city search choice, which allows for a more comparative viewing of city quality of life scores that better aids users in their city decision-making.
+_thefilmfix_ app enables users to intuitively browse and search for specific title entries from a comprehensive film list comprising the entire [Criterion Collection](https://www.criterion.com/) catalogue. Moreover, users can curate their own private film collections that can be referenced for future viewing purposes.
+
+_thefilmfix_ makes it simple for users to login to an individual account and access all available app features. Following login, users are welcomed to the app with a personalized greeting and may freely navigate to the home page for a general app description and landing page experience. Navigating to the Criterion Collection page, users can select individual films and view additional information, including director, language, and run-time details. Logged-in users are also granted the option of adding or removing selected film titles to a private user-curated film collection\*, which effectively serve as wishlists wherein users can log films that seem interesting or warrant future viewing.
+
+_Notably, user-curated collections are only accesible to logged-in users via the user account page._
 
 ## Specific Features
 
