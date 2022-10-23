@@ -1,3 +1,31 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Welcome to thefilmfix App :film_projector:](#welcome-to-thefilmfix-app-film_projector)
+    - [A simple, yet comprehensive film directory](#a-simple-yet-comprehensive-film-directory)
+  - [Project Philosophy](#project-philosophy)
+  - [General User Experience](#general-user-experience)
+  - [Specific Features](#specific-features)
+  - [How to Use](#how-to-use)
+  - [Technologies Used](#technologies-used)
+  - [Author](#author)
+- [Getting Started with Create React App](#getting-started-with-create-react-app)
+  - [Available Scripts](#available-scripts)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+  - [Learn More](#learn-more)
+    - [Code Splitting](#code-splitting)
+    - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
+    - [Making a Progressive Web App](#making-a-progressive-web-app)
+    - [Advanced Configuration](#advanced-configuration)
+    - [Deployment](#deployment)
+    - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
 
 ### A simple, yet comprehensive film directory
@@ -14,16 +42,15 @@ Film is a powerful and transcendent medium that captures, enriches and nourishes
 
 _thefilmfix_ app enables users to intuitively browse and search for specific title entries comprising the [Criterion Collection](https://www.criterion.com/) film catalogue. Moreover, users can curate their own private film collections that can be referenced for future viewing purposes.
 
-_thefilmfix_ makes it simple for users to login to an individual account and access all available app features. Following login, users are welcomed to the app with a personalized greeting and may freely navigate to the home page for a general app description and landing page experience. Navigating to the Criterion Collection page, users can select individual films and view additional information, including director, language, and run-time details. **Logged-in users are also granted the option of adding or removing selected film titles to a private user-curated film collection**, which effectively serve as wishlists wherein users can log films that seem interesting or warrant future viewing.
+_thefilmfix_ makes it simple for users to login to an individual account and access all available app features. Following login, users are welcomed to the app with a personalized greeting and may freely navigate to the home page for a general app description and landing page experience. Navigating to the Criterion Collection page, users can select individual films and view additional information, including director, language, and runtime details. **_Logged-in users are also granted the option of adding or removing selected film titles to a private user-curated film collection_**, which effectively serve as wishlists wherein users can log films that seem interesting or warrant future viewing.
 
 > Notably, user-curated collections are only accesible to logged-in users via the user account page.
 
 ## Specific Features
 
-- Can search through hundreds of global destinations via [teleport api](https://developers.teleport.org/)
-- Can specify which continent and country you are interested in finding a city
-- Can view individuaized profiles of each city, replete with an itemized and aggregate scoring of the city based on different quality of life criteria
-- Can view two city profiles at the same time to enable easier comparison and highlight the contrast between different cities' quality of life scores
+- Can view and search for specific film titles from more than one thousand overall entries via [the Criterion Movies Collection dataset](https://www.kaggle.com/datasets/ikarus777/criterion-movies-collection)
+- Can select and view individuaized profiles for each film, detailing important director, language, runtime, country, and release information
+- Can create and access private film collection that allows for easier and faster reference to films of interest and references for future viewing
 
 ## How to Use
 
