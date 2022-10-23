@@ -51,9 +51,11 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 - Can select and view individualized profiles for each film, detailing important director, language, runtime, country, and release information
 - Can create and access private film collection that allows for easier and faster reference to films of interest and references for future viewing
 
-## App Installation and Set-up
+## Installation and Set-up Guide
 
-1. Choose a directory and clone project git repository in chosen directory via terminal
+> This React app was created via create-react-app
+
+1. To begin, choose a directory and clone project git repository in chosen directory via terminal
 
    > git clone git@github.com:jmayheww/thefilmfix-app.git
 
@@ -103,12 +105,27 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 > ![image](./images/Markdown/darkmodegif.gif)
 
+## Resources and Documentation
+
+- [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+- [Create-React-App documentation](https://create-react-app.dev/)
+- [JSON Server documentation](https://www.npmjs.com/package/json-server)
+- [Datasets](https://www.kaggle.com/)
+- [Criterion Collection](https://www.criterion.com/)
+
 ## Technologies Used
+
+<h2>Languages and Frameworks</h2>
 
 - HTML
 - CSS
-- JavaScript
-- Teleport API
+- React/JSX
+
+<h2>Package Installations</h2>
+
+- Create-React-App
+- JSON-server
+- React-router
 
 </p>
 
