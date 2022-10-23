@@ -1,13 +1,13 @@
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
 <p>
 
-# A comprehensive film directory
+# A simple, yet comprehensive film directory
 
-> Let thefilmfix guide you to your next desperately wanting "fix" of transcendent film experiences
+> Let *thefilmfix* guide you to your next desperately wanting "fix" of transcendent film experience
 
 ## Project Philosophy
 
-This project is motivated by the ongoing, pandemic-accelerated trend within the US workforce to engage in and normalize remote work opportunities. Thus, NomadList directly targets remote-workers seeking a change of scenery, aspiring digital nomads seeking their first big move, veteran expats mulling over a new location to set up shop, and anyone else yearning to live or travel elsewhere.
+This project is motivated by an irrepresible desire to foster wider audience engagement and communion with films that provoke, compel, uplift, inspire, subvert, devastate, challenge, and transform the human experience.
 
 ## General User Experience
 
