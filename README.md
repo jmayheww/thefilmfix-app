@@ -1,15 +1,24 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Welcome to thefilmfix App :film_projector:](#welcome-to-thefilmfix-app-film_projector)
-    - [A simple, yet comprehensive film directory](#a-simple-yet-comprehensive-film-directory)
-  - [Project Philosophy](#project-philosophy)
-  - [General User Experience](#general-user-experience)
-  - [Specific Features](#specific-features)
-  - [How to Use](#how-to-use)
-  - [Technologies Used](#technologies-used)
-  - [Author](#author)
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+<h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
+
+### A simple, yet comprehensive film directory
+
+> Let _thefilmfix_ guide you to your next desperately wanting "fix" of sublime film experience
+
+<p>
+
+**Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
+
+- [Project Philosophy](#project-philosophy)
+- [General User Experience](#general-user-experience)
+- [Specific Features](#specific-features)
+- [How to Use](#how-to-use)
+- [Technologies Used](#technologies-used)
+- [Author](#author)
 - [Getting Started with Create React App](#getting-started-with-create-react-app)
   - [Available Scripts](#available-scripts)
     - [`npm start`](#npm-start)
@@ -23,16 +32,6 @@
     - [Advanced Configuration](#advanced-configuration)
     - [Deployment](#deployment)
     - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-<h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
-
-### A simple, yet comprehensive film directory
-
-> Let _thefilmfix_ guide you to your next desperately wanting "fix" of sublime film experience
-
-<p>
 
 ## Project Philosophy
 
@@ -49,8 +48,30 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 ## Specific Features
 
 - Can view and search for specific film titles from more than one thousand overall entries via [the Criterion Movies Collection dataset](https://www.kaggle.com/datasets/ikarus777/criterion-movies-collection)
-- Can select and view individuaized profiles for each film, detailing important director, language, runtime, country, and release information
+- Can select and view individualized profiles for each film, detailing important director, language, runtime, country, and release information
 - Can create and access private film collection that allows for easier and faster reference to films of interest and references for future viewing
+
+## App Installation and Set-up
+
+1. Choose a directory and clone project git repository in chosen directory via terminal
+
+   > git clone git@github.com:jmayheww/thefilmfix-app.git
+
+2. Confirm that you are in correct project directory and install all packages
+
+   > npm install
+
+3. Install local json-server
+
+   > npm install -g json-server
+
+4. In this app, JSON-server is already configured to run at local default port 3000 and can be started with the following terminal command
+
+   > npm run server
+
+5. In a separate terminal instance, navigate back to the filmfix-app directory and launch app locally at default port 3001 with the following terminal command
+
+   > npm start
 
 ## How to Use
 
