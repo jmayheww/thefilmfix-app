@@ -2,14 +2,35 @@
   "user-login": [
     {
       "username": "Herbie",
-      "password": "2222",
+      "password": "3333",
       "id": 1
     }
   ],
   "user-collections": [
     {
       "id": 1,
-      "collection": []
+      "collection": [
+        {
+          "FIELD1": 0,
+          "Title": "2 or 3 Things I Know About Her",
+          "Description": "In 2 or 3 Things I Know About Her(2 ou 3 choses que je sais d’elle), Jean-Luc Godard beckons us ever closer, whispering in our ears as narrator. About what? Money, sex, fashion, the city, love, language, war: in a word, everything. Among the legendary French filmmaker’s finest achievements, the film takes as its ostensible subject the daily life of Juliette Janson (Marina Vlady), a housewife from the Paris suburbs who prostitutes herself for extra money. Yet this is only a template for Godard to spin off into provocative philosophical tangents and gorgeous images.2 or 3 Things I Know About Her is perhaps Godard’s most revelatory look at consumer culture, shot in ravishing widescreen color by Raoul Coutard.",
+          "Director": "Jean-Luc Godard",
+          "Country": "France",
+          "Year": 1967,
+          "Language": "French",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/2d01c1355a26b42297d80a960899c4f5/93Btri2IgKEjkVfyjMctarS9VtARHo_large.jpg"
+        },
+        {
+          "FIELD1": 1,
+          "Title": "3:10 to Yuma",
+          "Description": "In this beautifully shot, psychologically complex western, Van Heflin is a mild-mannered cattle rancher who takes on the task of shepherding a captured outlaw (played with cucumber-cool charisma by Glenn Ford) to the train that will deliver him to prison. This apparently simple mission turns into a nerve-racking cat-and-mouse game that tests each man’s particular brand of honor. Based on a story by Elmore Leonard,3:10 to Yumais a thrilling, humane action movie, directed by the supremely talented studio filmmaker Delmer Daves with intense feeling and precision.",
+          "Director": "Delmer Daves",
+          "Country": "United States",
+          "Year": 1957,
+          "Language": "English",
+          "Image": "https://s3.amazonaws.com/criterion-production/films/ab1d9b806f1efe28878526241f632b9a/Zm61wXSmEUBWzzoMzmJOGYPvQ8Cg5v_large.jpg"
+        }
+      ]
     }
   ],
   "criterion-database": [

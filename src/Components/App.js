@@ -19,6 +19,7 @@ function App() {
   const [loggedUser, setLoggedUser] = useState(null);
   const [userCollection, setUserCollection] = useState([]);
   const [curFilm, setCurFilm] = useState(0);
+  const [alreadyInCollection, setAlreadyInCollection] = useState(false);
 
   useEffect(() => {
     getFilmData().then((data) => setFilms(data));
@@ -61,11 +62,14 @@ function App() {
             setFilms={setFilms}
             userCollection={userCollection}
             setUserCollection={setUserCollection}
+            loggedUser={loggedUser}
             user={loggedUser}
             curFilm={curFilm}
             setCurFilm={setCurFilm}
             handleAddToCollection={handleAddToCollection}
             handleRemoveFromCollection={handleRemoveFromCollection}
+            alreadyInCollection={alreadyInCollection}
+            setAlreadyInCollection={setAlreadyInCollection}
           />
         </Route>
         <Route path="/myaccount">
@@ -83,6 +87,7 @@ function App() {
             loggedUser={loggedUser}
             setLoggedUser={setLoggedUser}
             setUserCollection={setUserCollection}
+            setAlreadyInCollection={setAlreadyInCollection}
           />
         </Route>
         <Route exact path="/">

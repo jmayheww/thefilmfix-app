@@ -10,10 +10,13 @@ function FilmPage({
   userCollection,
   setUserCollection,
   user,
+  loggedUser,
   curFilm,
   setCurFilm,
   handleAddToCollection,
   handleRemoveFromCollection,
+  alreadyInCollection,
+  setAlreadyInCollection,
 }) {
   const history = useHistory();
   const match = useRouteMatch();
@@ -76,10 +79,13 @@ function FilmPage({
               userCollection={userCollection}
               setUserCollection={setUserCollection}
               user={user}
+              loggedUser={loggedUser}
               curFilm={curFilm}
               setCurFilm={setCurFilm}
               handleAddToCollection={handleAddToCollection}
               handleRemoveFromCollection={handleRemoveFromCollection}
+              alreadyInCollection={alreadyInCollection}
+              setAlreadyInCollection={setAlreadyInCollection}
             />
           </Route>
         </div>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { loginUrl, collectionUrl } from "../Utilities/api-helpers";
 
-function Logout({ setLoggedUser, loggedUser, setUserCollection }) {
+function Logout({ setLoggedUser, loggedUser, setAlreadyInCollection }) {
   const [updateLogin, setUpdateLogin] = useState(null);
   const [removeCollection, setRemoveCollection] = useState({});
 
@@ -19,12 +19,6 @@ function Logout({ setLoggedUser, loggedUser, setUserCollection }) {
   }
 
   function handleUserCollection() {
-    const updatedCollection = [
-      {
-        id: 1,
-        collection: [],
-      },
-    ];
     fetch(`${collectionUrl}/${loggedUser.id}`, {
       method: "PATCH",
       headers: {
@@ -37,6 +31,7 @@ function Logout({ setLoggedUser, loggedUser, setUserCollection }) {
       .then((resp) => resp.json())
       .then((data) => {
         console.log("data: ", data);
+        setAlreadyInCollection(false);
       });
   }
 

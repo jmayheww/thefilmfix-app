@@ -8,13 +8,15 @@ function FilmShow({
   userCollection,
   setUserCollection,
   user,
+  loggedUser,
   curFilm,
   setCurFilm,
   handleAddToCollection,
   handleRemoveFromCollection,
+  alreadyInCollection,
+  setAlreadyInCollection,
 }) {
   const params = useParams();
-  const [alreadyInCollection, setAlreadyInCollection] = useState(false);
 
   useEffect(() => {
     if (user) {
@@ -50,21 +52,25 @@ function FilmShow({
         <>
           <h2>{films[params.filmId].Title}</h2>
           <p className="film-desc">{films[params.filmId].Description}</p>
-          <GenButton
-            className={`collection-btn ${
-              alreadyInCollection ? "remove" : "add"
-            }`}
-            handleClick={
-              alreadyInCollection
-                ? () => handleRemoveFromCollection()
-                : () => handleAddToCollection()
-            }
-            text={
-              alreadyInCollection
-                ? "Remove from collection"
-                : "Add to collection"
-            }
-          />
+          {loggedUser ? (
+            <GenButton
+              className={`collection-btn ${
+                alreadyInCollection ? "remove" : "add"
+              }`}
+              handleClick={
+                alreadyInCollection
+                  ? () => handleRemoveFromCollection()
+                  : () => handleAddToCollection()
+              }
+              text={
+                alreadyInCollection
+                  ? "Remove from collection"
+                  : "Add to collection"
+              }
+            />
+          ) : (
+            ""
+          )}
         </>
       )}
     </div>
