@@ -12,7 +12,8 @@ function Search({ films, setFilterFilms }) {
     e.preventDefault();
 
     const filterFilmsByTitle = films.filter((film) => {
-      const titleWords = film.Title.toLowerCase().split(" ");
+      const titleWords = film.Title.toLowerCase().split(" ").join(" ");
+      console.log("titleWords: ", titleWords);
       const caseSearchedTerm = userSearchInput.toLowerCase();
 
       return titleWords.includes(caseSearchedTerm);
