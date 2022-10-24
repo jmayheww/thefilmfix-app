@@ -77,9 +77,9 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 ## How to Use
 
-1. **_Start the search by selecting a continent from the dropdown menu labeled 'Choose a continent:'_**
+1. **_Input username and password to login to thefilmfix'_**
 
-> ![image](./images/Markdown/continentgif.gif)
+> ![image](./images/Markdown/login.gif)
 
 2. **_Continue the search by selecting from a newly generated list of countries labeled 'Choose a country:'_**
 

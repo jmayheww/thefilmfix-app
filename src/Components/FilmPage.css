@@ -10,7 +10,7 @@
 }
 
 .search-input {
-    width: 19.5vw;
+    width: 15vw;
     margin-bottom: -1em;
 }
 
@@ -83,7 +83,7 @@
 
 .btn.submit-search {
     background-color: var(--color-positive);
-    width: 20vw;
+    width: 15.5vw;
     margin-top: -0.5em;
 }
 
