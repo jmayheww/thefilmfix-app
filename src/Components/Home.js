@@ -12,22 +12,16 @@ function Home({ loggedUser }) {
         <img
           src="https://pbs.twimg.com/media/FFrrTvAXIAQNV9t?format=jpg&name=4096x4096"
           alt="Godard proclaiming his addiction to cinema"
-          className="home-image"
-          width="800"
-          height="600"
         />
-        <h4>
-          Let{" "}
-          <span>
-            <i>thefilmfix</i>
-          </span>{" "}
+        <h4 className="home-greeting">
+          Hi <span className="username">{loggedUser.username}!</span>
         </h4>
+        <p>
+          <span>thefilmfix</span> app is dedicated to helping wayward film
+          buffs, enthusiasts, afficionados, addicts, and fanatics find their
+          next "fix" of sublime film experience.
+        </p>
       </div>
-      <p>
-        <span>thefilmfix</span> app is dedicated to helping wayward film buffs,
-        enthusiasts, afficionados, addicts, and fanatics find their next film
-        "fix".
-      </p>
     </div>
   );
 }

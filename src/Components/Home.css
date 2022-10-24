@@ -1,13 +1,32 @@
 .home {
+    width: calc(100vw - 4rem);
+    padding: 2rem;
     display: flex;
     flex-direction: column;
-
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark-bg);
+    color: white;
 }
 
-.home-title {
-    font-style: italic;
-    font-size: 3em;
-    margin: 0;
+.home img {
+    width: 700px;
+    aspect-ratio: 1.29 / 1;
+    object-fit: cover;
+    object-position: center;
+}
 
+
+.home span {
+    color: var(--color-accent);
+    font-style: italic;
+}
+
+.home p {
+    width: 700px;
+}
+
+.home-greeting span {
+    color: var(--color-username);
 
 }

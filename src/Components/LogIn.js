@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { loginUrl } from "../Utilities/api-helpers";
+import "./Log.css";
 
 const initialUser = {
   username: "",
@@ -36,14 +37,14 @@ function Login({ setLoggedUser }) {
   }
 
   return (
-    <div>
+    <div className="login">
       <h3>
         Please log in to your Film Fix account to begin exploring The Film Fix
         App.
       </h3>
       <h4>Log in to your Account</h4>
 
-      <form onSubmit={handleSubmit}>
+      <form className="account-form" onSubmit={handleSubmit}>
         <div>
           <input
             type="text"
@@ -62,7 +63,9 @@ function Login({ setLoggedUser }) {
             onChange={handleChange}
           />
         </div>
-        <button type="submit">Login</button>
+        <button className="account-form-buttons" type="submit">
+          Login
+        </button>
       </form>
     </div>
   );

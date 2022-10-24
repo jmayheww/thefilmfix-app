@@ -115,13 +115,13 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 ## Technologies Used
 
-<h2>Languages and Frameworks</h2>
+### Languages and Frameworks
 
 - HTML
 - CSS
 - React/JSX
 
-<h2>Package Installations</h2>
+### Package Installations
 
 - Create-React-App
 - JSON-server

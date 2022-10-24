@@ -1,6 +1,7 @@
 :root {
   --color-bg: aqua;
   --color-dark-bg: rgb(20, 20, 20);
+  --color-username: rgb(247, 57, 136);
 
   --color-positive: forestgreen;
   --color-negative: firebrick;
