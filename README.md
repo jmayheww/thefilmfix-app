@@ -1,19 +1,6 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Welcome to thefilmfix App :film_projector:](#welcome-to-thefilmfix-app-film_projector)
-    - [A simple, yet comprehensive film directory](#a-simple-yet-comprehensive-film-directory)
-  - [Project Philosophy](#project-philosophy)
-  - [General User Experience](#general-user-experience)
-  - [Specific Features](#specific-features)
-  - [Installation and Set-up Guide](#installation-and-set-up-guide)
-  - [How to Use](#how-to-use)
-  - [Resources and Documentation](#resources-and-documentation)
-  - [Technologies Used](#technologies-used)
-    - [Languages and Frameworks](#languages-and-frameworks)
-    - [Package Installations](#package-installations)
-  - [Author](#author)
-
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
@@ -27,24 +14,15 @@
 **Table of Contents** _generated with [DocToc](https://github.com/thlorenz/doctoc)_
 
 - [Project Philosophy](#project-philosophy)
-- [General User Experience](#general-user-experience)
-- [Specific Features](#specific-features)
-- [How to Use](#how-to-use)
-- [Technologies Used](#technologies-used)
-- [Author](#author)
-- [Getting Started with Create React App](#getting-started-with-create-react-app)
-  - [Available Scripts](#available-scripts)
-    - [`npm start`](#npm-start)
-    - [`npm test`](#npm-test)
-    - [`npm run build`](#npm-run-build)
-    - [`npm run eject`](#npm-run-eject)
-  - [Learn More](#learn-more)
-    - [Code Splitting](#code-splitting)
-    - [Analyzing the Bundle Size](#analyzing-the-bundle-size)
-    - [Making a Progressive Web App](#making-a-progressive-web-app)
-    - [Advanced Configuration](#advanced-configuration)
-    - [Deployment](#deployment)
-    - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
+  - [General User Experience](#general-user-experience)
+  - [Specific Features](#specific-features)
+  - [Installation and Set-up Guide](#installation-and-set-up-guide)
+  - [How to Use](#how-to-use)
+  - [Resources and Documentation](#resources-and-documentation)
+  - [Technologies Used](#technologies-used)
+    - [Languages and Frameworks](#languages-and-frameworks)
+    - [Package Installations](#package-installations)
+  - [Author](#author)
 
 ## Project Philosophy
 
