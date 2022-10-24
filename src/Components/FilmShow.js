@@ -49,8 +49,17 @@ function FilmShow({
     <div className="film-details">
       {films[curFilm] && (
         <>
-          <h2>{films[params.filmId].Title}</h2>
-          <p className="film-desc">{films[params.filmId].Description}</p>
+          <div className="details-a">
+            <h2>{films[curFilm].Title}</h2>
+          </div>
+          <div className="details-b">
+            <p className="director">{films[curFilm].Director}</p>
+            <p className="country">{films[curFilm].Country}</p>
+            <p className="year">{films[curFilm].Year}</p>
+          </div>
+          <div className="details-c">
+            <p className="film-desc">{films[curFilm].Description}</p>
+          </div>
           {loggedUser ? (
             <GenButton
               className={`collection-btn ${
