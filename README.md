@@ -132,7 +132,7 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 👤 **Joshua Mayhew**
 
-- ![image](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white): [@jmayheww](https://github.com/jmayheww)
+- Github: [@jmayheww](https://github.com/jmayheww)
 - LinkedIn: [@https:\/\/www.linkedin.com\/in\/joshua-mayhew-28883a89\/](https://linkedin.com/in/https://www.linkedin.com/in/joshua-mayhew-28883a89/)
 
 <!-- # Getting Started with Create React App
