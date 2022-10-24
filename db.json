@@ -1,11 +1,5 @@
 {
-  "user-login": [
-    {
-      "username": "Herbie",
-      "password": "333",
-      "id": 1
-    }
-  ],
+  "user-login": [],
   "user-collections": [
     {
       "id": 1,
