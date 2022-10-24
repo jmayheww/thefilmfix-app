@@ -83,11 +83,11 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 2. **_Continue the search by selecting from a newly generated list of countries labeled 'Choose a country:'_**
 
-> ![image](./images/Markdown/countryselection.gif)
+> ![image](./images/Markdown/home.gif)
 
 3. **_Finish the search by selecting a city from the newly generated list of cities labeled 'Choose a city:'_**
 
-> ![image](./images/Markdown/cityselction.gif)
+> ![image](./images/Markdown/My%20Account.gif)
 
 4. **_View a newly created city profile card that displays a snapshot image of the city, full city name, summary description of the city, city population, as well as a full itemized listing of different quality of life scores and an overall city score_**
 
