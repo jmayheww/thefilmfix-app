@@ -1,6 +1,19 @@
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+- [Welcome to thefilmfix App :film_projector:](#welcome-to-thefilmfix-app-film_projector)
+    - [A simple, yet comprehensive film directory](#a-simple-yet-comprehensive-film-directory)
+  - [Project Philosophy](#project-philosophy)
+  - [General User Experience](#general-user-experience)
+  - [Specific Features](#specific-features)
+  - [Installation and Set-up Guide](#installation-and-set-up-guide)
+  - [How to Use](#how-to-use)
+  - [Resources and Documentation](#resources-and-documentation)
+  - [Technologies Used](#technologies-used)
+    - [Languages and Frameworks](#languages-and-frameworks)
+    - [Package Installations](#package-installations)
+  - [Author](#author)
+
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 <h1 align="center">Welcome to thefilmfix App :film_projector:</h1>
@@ -81,29 +94,37 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 > ![image](./images/Markdown/login.gif)
 
-2. **_Continue the search by selecting from a newly generated list of countries labeled 'Choose a country:'_**
+2. **_Successful login redircts to Home page'_**
 
 > ![image](./images/Markdown/home.gif)
 
-3. **_Finish the search by selecting a city from the newly generated list of cities labeled 'Choose a city:'_**
+3. **_Navigate to My Account to view a personalized welcome message and user film collection'_**
 
 > ![image](./images/Markdown/My%20Account.gif)
 
-4. **_View a newly created city profile card that displays a snapshot image of the city, full city name, summary description of the city, city population, as well as a full itemized listing of different quality of life scores and an overall city score_**
+4. **_Visit the Criterion Films page to browse the Criterion Collection in its entirety. Clicking on individual entries displays additional film details_**
 
-> ![image](./images/Markdown/citycard.gif)
+> ![image](./images/Markdown/scroll.gif)
 
-5. **_Repeat the search process to select a second city and view its city profile alongside the first selection_**
+5. **_Traverse the film collection by clicking on either the next eight films or previous eight films buttons_**
 
-> ![image](./images/Markdown/secondcity.gif)
+> ![image](./images/Markdown/nextprevious.gif)
 
-6. **_Click the 'Reset Selection' button beneath each card to reset your choice and make a new selection_**
+6. **_Search for specific film titles via the search bar_**
 
-> ![image](./images/Markdown/resetchoice.gif)
+> ![image](./images/Markdown/search.gif)
 
-7. **_(Optional) Click the 'Dark Mode' button to toggle between dark and light modes_**
+7. **_Add or remove films to private user collection by toggling the add/remove films to collection button_**
 
-> ![image](./images/Markdown/darkmodegif.gif)
+> ![image](./images/Markdown/addremovelist.gif)
+
+8. **_View the user-curated private film collection in My Account and remove films by hovering over individual entries and clicking remove_**
+
+> ![image](./images/Markdown/removelist.gif)
+
+8. **_Navigate to the Logout page to log out of thefilmfix_**
+
+> ![image](./images/Markdown/logout.gif)
 
 ## Resources and Documentation
 
@@ -136,7 +157,7 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 - Github: [@jmayheww](https://github.com/jmayheww)
 - LinkedIn: [@https:\/\/www.linkedin.com\/in\/joshua-mayhew-28883a89\/](https://linkedin.com/in/https://www.linkedin.com/in/joshua-mayhew-28883a89/)
 
-# Getting Started with Create React App
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -205,4 +226,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
