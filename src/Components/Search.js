@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GenButton } from "./GenButton";
+import "./FilmPage.css";
 
 function Search({ films, setFilterFilms }) {
   const [userSearchInput, setUserSearchInput] = useState("");
@@ -13,7 +14,6 @@ function Search({ films, setFilterFilms }) {
 
     const filterFilmsByTitle = films.filter((film) => {
       const titleWords = film.Title.toLowerCase().split(" ").join(" ");
-      console.log("titleWords: ", titleWords);
       const caseSearchedTerm = userSearchInput.toLowerCase();
 
       return titleWords.includes(caseSearchedTerm);
@@ -24,7 +24,7 @@ function Search({ films, setFilterFilms }) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="search-form">
         <div>
           <input
             type="text"

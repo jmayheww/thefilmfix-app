@@ -4,6 +4,16 @@
     height: 85vh;
 }
 
+.search-form {
+   padding: 0 0.2em 0.1em;
+
+}
+
+.search-input {
+    width: 19.5vw;
+    margin-bottom: -1em;
+}
+
 /* FILMS SCROLLER */
 .scroll-container {
     scroll-behavior: smooth;
@@ -73,7 +83,8 @@
 
 .btn.submit-search {
     background-color: var(--color-positive);
-    width: 15vw;
+    width: 20vw;
+    margin-top: -0.5em;
 }
 
 .btn:disabled {

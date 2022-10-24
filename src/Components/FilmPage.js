@@ -54,10 +54,10 @@ function FilmPage({
 
   return (
     <main>
+      <br />
       <div className="search">
         <Search films={films} setFilterFilms={setFilteredFilms} />
       </div>
-      <br />
       <div className="films-container">
         <div className="scroll-container" ref={scrollerRef}>
           <FilmList

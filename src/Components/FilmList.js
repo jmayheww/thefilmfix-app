@@ -20,7 +20,6 @@ function FilmList({
     const id = film.FIELD1;
     const selected = id === curFilm;
 
-
     return (
       <div key={id} className={`film-card ${selected ? "selected" : ""}`}>
         <Link to={`/films/${id}`}>
@@ -33,7 +32,6 @@ function FilmList({
   return (
     <div className="card-container">
       <h1>Criterion Collection Films</h1>
-      <br />
       {renderFilms}
       <div className="film-nav-bottom">
         <div className="page-indication">
