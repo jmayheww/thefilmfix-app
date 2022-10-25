@@ -128,6 +128,10 @@ _thefilmfix_ makes it simple for users to login to an individual account and acc
 
 </p>
 
+## Citations and Credit
+
+- All Film titles are sourced from the [Criterion Collection](https://www.criterion.com/) and this app is not engaged in the sale, reproduction, or wrongful use of any Criterion content.
+
 ## Author
 
 👤 **Joshua Mayhew**
