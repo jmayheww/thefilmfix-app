@@ -43,7 +43,6 @@ function App() {
 
   function handleRemoveFromCollection(titleToDelete = films[curFilm].Title) {
     const newCollection = userCollection.filter(({ Title }) => {
-      console.log("titel", titleToDelete);
       return Title !== titleToDelete;
     });
     updateCollection(newCollection).then((data) => {

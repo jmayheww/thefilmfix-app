@@ -27,8 +27,6 @@ function FilmShow({
     }
   }, [user]);
 
-  useEffect(() => {}, [userCollection]);
-
   useEffect(() => {
     if (params.filmId) {
       setCurFilm(params.filmId);

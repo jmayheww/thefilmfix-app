@@ -13,7 +13,8 @@ function Search({ films, setFilterFilms }) {
     e.preventDefault();
 
     const filterFilmsByTitle = films.filter((film) => {
-      const titleWords = film.Title.toLowerCase().split(" ").join(" ");
+      const titleWords = film.Title.toLowerCase();
+
       const caseSearchedTerm = userSearchInput.toLowerCase();
 
       return titleWords.includes(caseSearchedTerm);
@@ -29,7 +30,7 @@ function Search({ films, setFilterFilms }) {
           <input
             type="text"
             name="searchtitles"
-            value={userSearchInput.searchtitles}
+            value={userSearchInput}
             placeholder="Search for film by title"
             className="search-input"
             onChange={handleChange}

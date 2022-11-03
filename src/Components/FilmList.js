@@ -23,7 +23,7 @@ function FilmList({
     return (
       <div key={id} className={`film-card ${selected ? "selected" : ""}`}>
         <Link to={`/films/${id}`}>
-          {<img src={Image} height="300" width="300" />}
+          <img src={Image} height="300" width="300" />
         </Link>
       </div>
     );
